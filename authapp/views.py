@@ -111,3 +111,24 @@ def send_verify_mail(user):
         [user.email],
         fail_silently=False
     )
+
+
+def verify(request: HttpRequest, email: str, activation_key: str):
+    context = {
+        'title': 'user varification',
+        'site_navigation_links': site_navigation_links,
+    }
+
+    try:
+        user = ShopUser.objects.get(email=email)
+        if user.activation_key == activation_key and not user.is_activation_key_expired():
+            user.is_active = True
+            user.save()
+            auth.login(request, user)
+            return render(request, 'authapp/varification.html', context)
+        else:
+            print(f'Error while activating user {user}.')
+            return render(request, 'authapp/verification.html', context)
+    except Exception as e:
+        print(f'Error while activating user: {e.args}')
+        return HttpResponseRedirect(reverse('mainapp:index'))

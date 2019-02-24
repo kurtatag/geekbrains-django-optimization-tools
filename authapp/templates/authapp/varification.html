@@ -1,0 +1,29 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+{% block menu %}
+    <div class="hero padding-site">
+        {% include 'mainapp/includes/inc_site_navigation.html' %}
+        <h1 class="hero-title">User Varification Page</h1>
+    </div>
+{% endblock menu %}
+
+{% block content %}
+
+    {% for _ in "xxx" %}
+        <br>
+    {% endfor %}
+
+    {% if user %}
+        <h3>Congratulations!</h3>
+        <br>
+        <h4>Account "{{ user.username }}" was successfully confirmed.</h4>
+    {% else %}
+        <h3>Sorry, user {{ user.username }} was not activated.</h3>
+    {% endif %}
+
+    {% for _ in "xxxxx" %}
+        <br>
+    {% endfor %}
+
+{% endblock content %}
