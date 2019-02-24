@@ -1,0 +1,27 @@
+{% load staticfiles %}
+{% if product_list.has_other_pages %}
+    <div class="pagination-section">
+        <div class="pagination">
+            {% if product_list.has_previous %}
+                <a href="?page={{product_list.previous_page_number}}#categories">&laquo;</a>
+            {% else %}
+                <a href="" class="isDisabled">&laquo;</a>
+            {% endif %}
+
+            {% for i in product_list.paginator.page_range %}
+                {% if product_list.number == i %}
+                    <a href="" class="active">{{ i }}</a>
+                {% else %}
+                    <a href="?page={{ i }}#categories">{{ i }}</a>
+                {% endif %}
+            {% endfor %}
+
+            {% if product_list.has_next %}
+                <a href="?page={{product_list.next_page_number}}#categories">&raquo;</a>
+            {% else %}
+                <a href="" class="isDisabled">&raquo;</a>
+            {% endif %}
+        </div>
+    </div>
+
+{% endif %}

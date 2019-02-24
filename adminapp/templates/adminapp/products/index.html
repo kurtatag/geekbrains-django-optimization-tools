@@ -1,0 +1,38 @@
+{% extends 'adminapp/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+        <ul class="list-group list-group-flush mt-5 mx-auto col-10">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <h2>Products</h2>
+                <a class="btn btn-success" href="{% url 'admin:product_create' %}" role="button">New Product</a>
+            </li>
+        </ul>
+        <div class="d-flex justify-content-start align-items-center mt-5 mb-3 mx-auto col-10">
+            <h5 class="mr-3">Category:</h5>
+            <div class="dropdown">
+                <button class="btn btn-info btn-sm dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    All
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    {% for category in categories %}
+                        <div class="dropdown-item" style="cursor: pointer;">{{ category | title }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+            <ul id="prducts-by-category" class="list-group list-group-flush mx-auto col-10" style="min-height: 200px;">
+                {% for product in products %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="{% url 'admin:product_read' pk=product.id %}" class="text-dark">
+                            {{ product.name }} {% if not product.is_active %}
+                            <span class="badge badge-dark">Not Active</span>{% endif %}
+                        </a>
+                        <a class="btn btn-primary" href="{% url 'admin:product_read' pk=product.pk %}"
+                           role="button">View</a>
+                    </li>
+                {% endfor %}
+            </ul>
+    {% include 'adminapp/includes/_pagination.html' %}
+{% endblock %}

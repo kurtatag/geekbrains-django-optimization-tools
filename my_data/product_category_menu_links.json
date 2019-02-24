@@ -1,0 +1,26 @@
+[
+  {
+    "url_param": "all",
+    "name": "all"
+  },
+  {
+    "url_param": "home",
+    "name": "home"
+  },
+  {
+    "url_param": "office",
+    "name": "office"
+  },
+  {
+    "url_param": "furniture",
+    "name": "furniture"
+  },
+  {
+    "url_param": "modern",
+    "name": "modern"
+  },
+  {
+    "url_param": "classic",
+    "name": "classic"
+  }
+]

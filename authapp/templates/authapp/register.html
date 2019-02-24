@@ -1,0 +1,28 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+{% block menu %}
+    <div class="hero padding-site">
+        {% include 'mainapp/includes/inc_site_navigation.html' %}
+        <h1 class="hero-title">Register User Page</h1>
+    </div>
+{% endblock menu %}
+
+{% block content %}
+
+    {% for _ in "xxx" %}
+        <br>
+    {% endfor %}
+
+    <form action="{% url 'auth:register' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ register_form.as_p }}
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% for _ in "xxxxx" %}
+        <br>
+    {% endfor %}
+
+{% endblock content %}

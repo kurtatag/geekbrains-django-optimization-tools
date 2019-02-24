@@ -1,0 +1,14 @@
+[
+  {
+    "path_name": "index",
+    "name": "home"
+  },
+  {
+    "path_name": "products:index",
+    "name": "products"
+  },
+  {
+    "path_name": "contact",
+    "name": "contact"
+  }
+]

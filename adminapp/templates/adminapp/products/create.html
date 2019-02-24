@@ -1,0 +1,17 @@
+{% extends 'adminapp/base.html' %}
+
+{% block content %}
+
+    <div class="mt-5 mb-3 mx-auto col-10">
+        <h2>New product:</h2>
+    </div>
+
+    <div class="card-body mx-auto col-10">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Create" class="btn btn-primary">
+        </form>
+    </div>
+
+{% endblock %}

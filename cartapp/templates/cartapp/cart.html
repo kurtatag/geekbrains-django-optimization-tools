@@ -1,0 +1,66 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+{% block menu %}
+    <div class="hero padding-site">
+        {% include 'mainapp/includes/inc_site_navigation.html' %}
+        <h1 class="hero-title">Cart View</h1>
+    </div>
+{% endblock menu %}
+
+{% block content %}
+    <div class="shopping-cart">
+        <!-- Title -->
+        <div class="title">
+            Products In Your Cart
+        </div>
+
+        <!-- Cart Products -->
+        {% if cart %}
+            {% for cart_product in cart %}
+                <div class="item">
+                    <div class="cart-product-id" style="display: none;">{{ cart_product.pk }}</div>
+                    <div class="buttons">
+                        <a href="{% url 'cart:remove' cart_product.pk %}">
+                            <span class="delete-btn"></span>
+                        </a>
+                    </div>
+
+                    <div class="image">
+                        <a href="{% url 'products:product_details' product_id=cart_product.product.id %}">
+                            <img src="{{ cart_product.product.image.url }}" alt="" style="width: 80px;"/>
+                        </a>
+                    </div>
+
+                    <div class="cart-product-name">
+                        <a href="{% url 'products:product_details' product_id=cart_product.product.id %}">
+                            <span>{{ cart_product.product.name }}</span>
+                        </a>
+
+                    </div>
+
+                    <div class="quantity">
+                        <button class="plus-btn" type="button" name="button">
+                            <img src="{% static 'img/plus.svg' %}" alt=""/>
+                        </button>
+                        <input readonly type="text" name="name" value="{{ cart_product.quantity }}">
+                        <button class="minus-btn" type="button" name="button">
+                            <img src="{% static 'img/minus.svg' %}" alt=""/>
+                        </button>
+                    </div>
+
+                    <div class="total-price">${{ cart_product.product_price_total }}</div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="item">
+                <p style="padding: 50px 0; color: #5E6977;">No Items Avalable</p>
+            </div>
+        {% endif %}
+
+    </div>
+
+    <script type="text/javascript">
+
+    </script>
+{% endblock content %}

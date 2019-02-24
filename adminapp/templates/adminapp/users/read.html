@@ -1,0 +1,28 @@
+{% extends 'adminapp/base.html' %}
+
+{% block content %}
+    <ul class="list-group list-group-flush mt-5 mx-auto col-10">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <h2 class="text-primary">User: {{ user }} {% if not user.is_active %}<span class="badge badge-dark">Not Active</span>{% endif %}</h2>
+            <span>
+                <a class="btn btn-warning" href="{% url 'admin:user_update' pk=user.pk %}"
+                   role="button"> Edit </a>
+                <a class="btn btn-danger {% if not user.is_active %}disabled{% endif %}" href="{% url 'admin:user_delete' pk=user.pk %}" role="button">Delete</a>
+            </span>
+        </li>
+    </ul>
+
+    <div class="mt-5 mb-3 mx-auto col-10">
+        <h5>User details:</h5>
+    </div>
+
+    <ul class="list-group list-group-flush mx-auto col-10">
+        {% for field_label, field_value in user_data.items %}
+            <li class="list-group-item d-flex  align-items-center">
+                <div class="w-50">{{ field_label }}</div>
+                <div class="w-50">{{ field_value }}</div>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'admin:index' %}">Admin Site</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">View Site</a>
+                </li>
+                <li class="nav-item {% if 'categories' in request.path %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'admin:categories' %}">Categories</a>
+                </li>
+                <li class="nav-item {% if 'products' in request.path %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'admin:products' %}">Products</a>
+                </li>
+                <li class="nav-item {% if 'users' in request.path %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'admin:users' %}">Users</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

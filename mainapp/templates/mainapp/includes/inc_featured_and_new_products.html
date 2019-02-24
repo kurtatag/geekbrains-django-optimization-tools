@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<div class="featured-product-section padding-site">
+    <div class="featured-product-nav">
+        <ul class="tab-controll">
+            <li class="tab-list"><a href="" class="tab-link-active">Featured</a></li>
+            <li class="tab-list"><a href="" class="tab-link">New</a></li>
+        </ul>
+        <a class="link-explore-all" href="{% url 'products:index' %}">Explore All &gt;</a>
+    </div>
+    <div class="featured-product-box">
+        <div class="featured-product" style="background-image: url({% static 'img/featured-product-1.jpg' %});">
+            <div class="featured-product-hover">
+                <div class="featured-product-link"><img src="{% static 'img/arrow.svg' %}" alt="arrow"></div>
+                <h4 class="featured-product-h4">Fishnet Chair</h4>
+                <p class="featured-product-p">Seat and back with upholstery made of cold cure foam</p>
+            </div>
+        </div>
+        <div class="featured-product" style="background-image: url({% static 'img/featured-product-2.jpg' %});">
+            <div class="featured-product-hover">
+                <div class="featured-product-link"><img src="{% static 'img/arrow.svg' %}" alt="arrow"></div>
+                <h4 class="featured-product-h4">Fishnet Chair</h4>
+                <p class="featured-product-p">Seat and back with upholstery made of cold cure foam</p>
+            </div>
+        </div>
+        <div class="featured-product" style="background-image: url({% static 'img/featured-product-3.jpg' %});">
+            <div class="featured-product-hover">
+                <div class="featured-product-link"><img src="{% static 'img/arrow.svg' %}" alt="arrow"></div>
+                <h4 class="featured-product-h4">Fishnet Chair</h4>
+                <p class="featured-product-p">Seat and back with upholstery made of cold cure foam</p>
+            </div>
+        </div>
+        <div class="featured-product" style="background-image: url({% static 'img/featured-product-4.jpg' %});">
+            <div class="featured-product-hover">
+                <div class="featured-product-link"><img src="{% static 'img/arrow.svg' %}" alt="arrow"></div>
+                <h4 class="featured-product-h4">Fishnet Chair</h4>
+                <p class="featured-product-p">Seat and back with upholstery made of cold cure foam</p>
+            </div>
+        </div>
+    </div>
+</div>
