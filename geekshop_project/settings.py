@@ -139,3 +139,27 @@ AUTH_USER_MODEL = 'authapp.ShopUser'
 
 # Login url settings
 LOGIN_URL = '/auth/login/'
+
+
+# Email config
+
+DOMAIN_NAME = 'http://localhost:8000'  # used in a message sent to a new user
+
+# version: gmail
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'geekbrains.kurtatag@gmail.com'
+EMAIL_HOST_PASSWORD = 'Geekbrains2019'
+EMAIL_USE_TLS = True
+
+# version: python -m smtpd -n -c DebuggingServer localhost:1025
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
+EMAIL_HOST_USER = None
+EMAIL_HOST_PASSWORD = None
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = False
+
+# version: file backend
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = 'tmp/app-messages'
