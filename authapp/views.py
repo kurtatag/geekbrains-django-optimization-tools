@@ -4,7 +4,10 @@ from authapp.forms import (ShopUserLoginForm, ShopUserRegisterForm,
                            ShopUserEditForm)
 from django.contrib import auth
 from django.urls import reverse
+from django.core.mail import send_mail
+from django.conf import settings
 
+from .models import ShopUser
 from my_utils import get_data_from_json
 
 site_navigation_links = get_data_from_json('site_navigation_links.json')
@@ -50,8 +53,13 @@ def register(request: HttpRequest):
         register_form = ShopUserRegisterForm(request.POST, request.FILES)
 
         if register_form.is_valid():
-            register_form.save()
-            return HttpResponseRedirect(reverse('auth:login'))
+            user = register_form.save()
+            if send_verify_mail(user):
+                print('Confirmation email is sent successfully.')
+                return HttpResponseRedirect(reverse('auth:login'))
+            else:
+                print('Some problem while sending confirmation email.')
+                return HttpResponseRedirect(reverse('auth:register'))
     else:
         register_form = ShopUserRegisterForm()
 
@@ -82,3 +90,24 @@ def edit(request: HttpRequest):
         'edit_form': edit_form
     }
     return render(request, 'authapp/edit.html', context)
+
+
+def send_verify_mail(user):
+    verify_link = reverse(
+        'auth:verify',
+        args=[user.email, user.activation_key]
+    )
+
+    title = f'Account confirmation for user {user.username}'
+
+    message = f'Hello {user.username},\n' \
+              f'To confirm your email please click this link:\n' \
+              f'{settings.DOMAIN_NAME}{verify_link}'
+
+    return send_mail(
+        title,
+        message,
+        settings.EMAIL_HOST_USER,
+        [user.email],
+        fail_silently=False
+    )
