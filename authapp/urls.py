@@ -11,7 +11,7 @@ urlpatterns = [
     path('edit/', authapp_views.edit, name='edit'),
     path(
         'verify/<str:email>/<str:activation_key>/',
-        authapp_views.send_verify_mail,
+        authapp_views.verify,
         name='verify'
     ),
 ]
