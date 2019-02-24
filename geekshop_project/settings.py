@@ -122,19 +122,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
 STATIC_URL = '/static/'
-
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "geekshop_project/static"),
 ]
 
 
+# Media folder settings
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
+# User authorization model settings
 AUTH_USER_MODEL = 'authapp.ShopUser'
 
 
+# Login url settings
 LOGIN_URL = '/auth/login/'
