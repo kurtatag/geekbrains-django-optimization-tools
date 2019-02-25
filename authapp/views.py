@@ -81,7 +81,10 @@ def edit(request: HttpRequest):
 
         if edit_form.is_valid():
             edit_form.save()
+            messages.success(request, 'User info was successfully updated!')
             return HttpResponseRedirect(reverse('auth:edit'))
+        else:
+            messages.error(request, 'User info was not updated.')
     else:
         edit_form = ShopUserRegisterForm(instance=request.user)
 

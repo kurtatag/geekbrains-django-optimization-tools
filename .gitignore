@@ -7,6 +7,7 @@ venv
 local_settings.py
 db.sqlite3
 /static
+/media/users_avatars/*
 
 __pycache__
 script.py
