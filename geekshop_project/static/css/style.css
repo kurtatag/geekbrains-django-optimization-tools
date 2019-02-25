@@ -1364,3 +1364,32 @@ input:focus {
   pointer-events: none;
 }
 
+
+/* ------------------------------- messages ------------------------------- */
+
+.msg {
+    display: block;
+    height: 50px;
+    margin: 15px 0;
+    text-align: center;
+    line-height: 50px;
+    border-radius: .25rem;
+}
+
+.msg-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+.msg-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.msg-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}

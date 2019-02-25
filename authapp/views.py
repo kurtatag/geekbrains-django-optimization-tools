@@ -3,6 +3,7 @@ from django.shortcuts import render, HttpResponseRedirect
 from authapp.forms import (ShopUserLoginForm, ShopUserRegisterForm,
                            ShopUserEditForm)
 from django.contrib import auth
+from django.contrib import messages
 from django.urls import reverse
 from django.core.mail import send_mail
 from django.conf import settings
@@ -55,10 +56,10 @@ def register(request: HttpRequest):
         if register_form.is_valid():
             user = register_form.save()
             if send_verify_mail(user):
-                print('Confirmation email is sent successfully.')
+                messages.success(request, 'Confirmation email was successfully sent.')
                 return HttpResponseRedirect(reverse('auth:login'))
             else:
-                print('Some problem while sending confirmation email.')
+                messages.error(request, 'Problem while sending confirmation email.')
                 return HttpResponseRedirect(reverse('auth:register'))
     else:
         register_form = ShopUserRegisterForm()
@@ -127,8 +128,8 @@ def verify(request: HttpRequest, email: str, activation_key: str):
             auth.login(request, user)
             return render(request, 'authapp/varification.html', context)
         else:
-            print(f'Error while activating user {user}.')
-            return render(request, 'authapp/verification.html', context)
+            messages.error(request, f'Error while activating user {user}.')
+            return render(request, 'authapp/varification.html', context)
     except Exception as e:
-        print(f'Error while activating user: {e.args}')
+        messages.error(request, f'Error while activating user:\n{e}\n {e.args}')
         return HttpResponseRedirect(reverse('index'))
