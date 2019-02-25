@@ -146,6 +146,7 @@ LOGIN_URL = '/auth/login/'
 # Email config
 
 DOMAIN_NAME = 'http://localhost:8000'  # used in a message sent to a new user
+DOMAIN_NAME = 'http://didinag.pythonanywhere.com'  # for demo site
 
 # version: gmail
 EMAIL_HOST = 'smtp.gmail.com'
