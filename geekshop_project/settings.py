@@ -153,13 +153,13 @@ EMAIL_HOST_PASSWORD = 'Geekbrains2019'
 EMAIL_USE_TLS = True
 
 # version: python -m smtpd -n -c DebuggingServer localhost:1025
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 1025
-EMAIL_HOST_USER = None
-EMAIL_HOST_PASSWORD = None
-EMAIL_USE_TLS = False
-EMAIL_USE_SSL = False
+# EMAIL_HOST = 'localhost'
+# EMAIL_PORT = 1025
+# EMAIL_HOST_USER = None
+# EMAIL_HOST_PASSWORD = None
+# EMAIL_USE_TLS = False
+# EMAIL_USE_SSL = False
 
 # version: file backend
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = 'tmp/app-messages'
+# EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+# EMAIL_FILE_PATH = 'tmp/app-messages'
