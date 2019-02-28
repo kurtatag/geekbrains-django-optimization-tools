@@ -40,12 +40,12 @@
                     </div>
 
                     <div class="quantity">
-                        <button class="plus-btn" type="button" name="button">
-                            <img src="{% static 'img/plus.svg' %}" alt=""/>
-                        </button>
-                        <input readonly type="text" name="name" value="{{ cart_product.quantity }}">
                         <button class="minus-btn" type="button" name="button">
                             <img src="{% static 'img/minus.svg' %}" alt=""/>
+                        </button>
+                        <input readonly type="text" name="name" value="{{ cart_product.quantity }}">
+                        <button class="plus-btn" type="button" name="button">
+                            <img src="{% static 'img/plus.svg' %}" alt=""/>
                         </button>
                     </div>
 

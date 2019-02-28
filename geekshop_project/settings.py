@@ -25,7 +25,7 @@ SECRET_KEY = '0ffhl3*jc19akyhxek!&!n8t%#1v=4nm5ou+web4p2%5^il)z-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'didinag.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'didinag.pythonanywhere.com']
 
 
 # Application definition
@@ -66,6 +66,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'mainapp.context_processors.navigation',
+                'mainapp.context_processors.cart',
             ],
         },
     },
@@ -122,19 +124,45 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
 STATIC_URL = '/static/'
-
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "geekshop_project/static"),
 ]
 
 
+# Media folder settings
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
+# User authorization model settings
 AUTH_USER_MODEL = 'authapp.ShopUser'
 
 
+# Login url settings
 LOGIN_URL = '/auth/login/'
+
+
+# Email config
+
+DOMAIN_NAME = 'http://localhost:8000'  # used in a message sent to a new user
+DOMAIN_NAME = 'http://didinag.pythonanywhere.com'  # for demo site
+
+# version: gmail
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'geekbrains.kurtatag@gmail.com'
+EMAIL_HOST_PASSWORD = 'Geekbrains2019'
+EMAIL_USE_TLS = True
+
+# version: python -m smtpd -n -c DebuggingServer localhost:1025
+# EMAIL_HOST = 'localhost'
+# EMAIL_PORT = 1025
+# EMAIL_HOST_USER = None
+# EMAIL_HOST_PASSWORD = None
+# EMAIL_USE_TLS = False
+# EMAIL_USE_SSL = False
+
+# version: file backend
+# EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+# EMAIL_FILE_PATH = 'tmp/app-messages'

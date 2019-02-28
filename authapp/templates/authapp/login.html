@@ -10,28 +10,22 @@
 
 {% block content %}
 
-    {% for _ in "xxx" %}
-        <br>
-    {% endfor %}
-
     <form action="{% url 'auth:login' %}" method="post">
-        {% csrf_token %}
-        {% if next %}
-            <input type="hidden" name="next" value="{{ next }}">
-        {% endif %}
-        {{ login_form.as_p }}
-        <br>
-        <input type="submit" value="Submit">
+        <div class="form-container">
+            {% csrf_token %}
+            {% if next %}
+                <input type="hidden" name="next" value="{{ next }}">
+            {% endif %}
+            {{ login_form }}
+            <button type="submit" class="submit-button">Login</button>
+        </div>
     </form>
 
-    {% for _ in "xxxxx" %}
-        <br>
-    {% endfor %}
-
-    <a href="{% url 'auth:register' %}" style="color: red">Don't have an account?</a>
-
-    {% for _ in "xx" %}
-        <br>
-    {% endfor %}
+    <div style="text-align: center; margin: 30px 0;">
+        Don't have an account? Register
+        <a href="{% url 'auth:register' %}" style="color: #1e88e5;">
+            here
+        </a>.
+    </div>
 
 {% endblock content %}

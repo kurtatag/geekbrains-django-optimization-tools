@@ -10,19 +10,12 @@
 
 {% block content %}
 
-    {% for _ in "xxx" %}
-        <br>
-    {% endfor %}
-
     <form action="{% url 'auth:register' %}" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ register_form.as_p }}
-        <br>
-        <input type="submit" value="Submit">
+        <div class="form-container">
+            {% csrf_token %}
+            {{ register_form }}
+            <button type="submit" class="submit-button">Register</button>
+        </div>
     </form>
-
-    {% for _ in "xxxxx" %}
-        <br>
-    {% endfor %}
 
 {% endblock content %}

@@ -10,21 +10,17 @@
 
 {% block content %}
 
-    {% for _ in "xxx" %}
-        <br>
-    {% endfor %}
-
     <form action="{% url 'auth:edit' %}" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ edit_form.as_p }}
-        <br>
-        <input type="submit" value="Submit">
+        {% if user.avatar %}
+            <div class="imgcontainer">
+                <img src="/media/{{ user.avatar }}" alt="Avatar" class="avatar">
+            </div>
+        {% endif %}
+        <div class="form-container">
+            {% csrf_token %}
+            {{ edit_form }}
+            <button type="submit" class="submit-button">Update</button>
+        </div>
     </form>
-    
-    <div class="user_avatar"><img src="/media/{{ user.avatar }}" alt=""></div>
-
-    {% for _ in "xxxxx" %}
-        <br>
-    {% endfor %}
 
 {% endblock content %}
