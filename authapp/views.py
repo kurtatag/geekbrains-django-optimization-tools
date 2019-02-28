@@ -119,7 +119,7 @@ def send_verify_mail(user):
 
 def verify(request: HttpRequest, email: str, activation_key: str):
     context = {
-        'title': 'user varification',
+        'title': 'user verification',
         'site_navigation_links': site_navigation_links,
     }
 
@@ -129,10 +129,10 @@ def verify(request: HttpRequest, email: str, activation_key: str):
             user.is_active = True
             user.save()
             auth.login(request, user)
-            return render(request, 'authapp/varification.html', context)
+            return render(request, 'authapp/verification.html', context)
         else:
             messages.error(request, f'Error while activating user {user}.')
-            return render(request, 'authapp/varification.html', context)
+            return render(request, 'authapp/verification.html', context)
     except Exception as e:
         messages.error(request, f'Error while activating user:\n{e}\n {e.args}')
         return HttpResponseRedirect(reverse('index'))
