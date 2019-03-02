@@ -1,13 +1,14 @@
 from django.http import HttpRequest
 from django.shortcuts import render, HttpResponseRedirect
-from authapp.forms import (ShopUserLoginForm, ShopUserRegisterForm,
-                           ShopUserEditForm)
 from django.contrib import auth
 from django.contrib import messages
 from django.urls import reverse
 from django.core.mail import send_mail
 from django.conf import settings
+from django.db import transaction
 
+from authapp.forms import (ShopUserLoginForm, ShopUserRegisterForm,
+                           ShopUserEditForm, ShopUserProfileEditForm)
 from .models import ShopUser
 from my_utils import get_data_from_json
 
@@ -72,14 +73,17 @@ def register(request: HttpRequest):
     return render(request, 'authapp/register.html', context)
 
 
+@transaction.atomic
 def edit(request: HttpRequest):
     title = 'edit user'
 
     if request.method == 'POST':
         edit_form = ShopUserEditForm(request.POST, request.FILES,
                                          instance=request.user)
+        profile_form = ShopUserProfileEditForm(request.POST,
+                                        instance=request.user.shopuserprofile)
 
-        if edit_form.is_valid():
+        if edit_form.is_valid() and profile_form.is_valid():
             edit_form.save()
             messages.success(request, 'User info was successfully updated!')
             return HttpResponseRedirect(reverse('auth:edit'))
@@ -87,11 +91,15 @@ def edit(request: HttpRequest):
             messages.error(request, 'User info was not updated.')
     else:
         edit_form = ShopUserEditForm(instance=request.user)
+        profile_form = ShopUserProfileEditForm(
+            instance=request.user.shopuserprofile
+        )
 
     context = {
         'title': title,
         'site_navigation_links': site_navigation_links,
-        'edit_form': edit_form
+        'edit_form': edit_form,
+        'profile_form': profile_form,
     }
     return render(request, 'authapp/edit.html', context)
 
