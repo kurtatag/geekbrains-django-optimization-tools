@@ -86,7 +86,7 @@ def edit(request: HttpRequest):
         else:
             messages.error(request, 'User info was not updated.')
     else:
-        edit_form = ShopUserRegisterForm(instance=request.user)
+        edit_form = ShopUserEditForm(instance=request.user)
 
     context = {
         'title': title,
