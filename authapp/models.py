@@ -33,6 +33,8 @@ class ShopUserProfile(models.Model):
                                 blank=True)
     gender = models.CharField(verbose_name='Gender', max_length=10,
                               choices=GENDER_CHOICES, blank=True)
+    vk_page = models.CharField(verbose_name='VK Page', max_length=128,
+                               blank=True)
 
     @receiver(post_save, sender=ShopUser)
     def create_user_profile(sender, instance, created, **kwargs):
