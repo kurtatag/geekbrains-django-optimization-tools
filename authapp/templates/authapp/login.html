@@ -28,4 +28,10 @@
         </a>.
     </div>
 
+    <div style="text-align: center; margin: 30px 0;">
+        Sign in with
+        <a href="{% url 'social:begin' 'vk-oauth2' %}?next=/" class="fab fa-vk social"></a>
+        <a href="#" class="fab fa-google social"></a>
+    </div>
+
 {% endblock content %}

@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'mainapp',
     'authapp',
     'cartapp',
-    'adminapp'
+    'adminapp',
+    'social_django'
 ]
 
 MIDDLEWARE = [
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'geekshop_project.urls'
@@ -68,6 +70,8 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'mainapp.context_processors.navigation',
                 'mainapp.context_processors.cart',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -166,3 +170,32 @@ EMAIL_USE_TLS = True
 # version: file backend
 # EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 # EMAIL_FILE_PATH = 'tmp/app-messages'
+
+
+# social_django settings
+
+# SOCIAL_AUTH_URL_NAMESPACE = 'social'
+LOGIN_ERROR_URL = '/'
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.vk.VKOAuth2',
+)
+
+SOCIAL_AUTH_VK_OAUTH2_KEY = '6883090'
+SOCIAL_AUTH_VK_OAUTH2_SECRET = 'DqVPTEICByzWbeAgt8kz'
+
+SOCIAL_AUTH_VK_OAUTH2_IGNORE_DEFAULT_SCOPE = True
+SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['email']
+
+SOCIAL_AUTH_PIPELINE = (
+    'social_core.pipeline.social_auth.social_details',
+    'social_core.pipeline.social_auth.social_uid',
+    'social_core.pipeline.social_auth.auth_allowed',
+    'social_core.pipeline.social_auth.social_user',
+    'social_core.pipeline.user.create_user',
+    'authapp.pipeline.save_user_profile',
+    'social_core.pipeline.social_auth.associate_user',
+    'social_core.pipeline.social_auth.load_extra_data',
+    'social_core.pipeline.user.user_details',
+)

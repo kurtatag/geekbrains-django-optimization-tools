@@ -48,7 +48,11 @@
                           {% else %}
                             menu-link
                           {% endif %}">
-                    User({{ request.user }})
+                    User({% if request.user.first_name %}
+                                {{ request.user.first_name }}
+                            {% else %}
+                                {{ request.user }}
+                            {% endif %})
                 </a>
             </li>
         {% endif %}
