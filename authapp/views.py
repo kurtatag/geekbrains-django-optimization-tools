@@ -10,9 +10,6 @@ from django.db import transaction
 from authapp.forms import (ShopUserLoginForm, ShopUserRegisterForm,
                            ShopUserEditForm, ShopUserProfileEditForm)
 from .models import ShopUser
-from my_utils import get_data_from_json
-
-site_navigation_links = get_data_from_json('site_navigation_links.json')
 
 
 def login(request: HttpRequest):
@@ -36,7 +33,6 @@ def login(request: HttpRequest):
 
     context = {
         'title': title,
-        'site_navigation_links': site_navigation_links,
         'login_form': login_form,
         'next': next
     }
@@ -67,7 +63,6 @@ def register(request: HttpRequest):
 
     context = {
         'title': title,
-        'site_navigation_links': site_navigation_links,
         'register_form': register_form
     }
     return render(request, 'authapp/register.html', context)
@@ -97,7 +92,6 @@ def edit(request: HttpRequest):
 
     context = {
         'title': title,
-        'site_navigation_links': site_navigation_links,
         'edit_form': edit_form,
         'profile_form': profile_form,
     }
@@ -128,7 +122,6 @@ def send_verify_mail(user):
 def verify(request: HttpRequest, email: str, activation_key: str):
     context = {
         'title': 'user verification',
-        'site_navigation_links': site_navigation_links,
     }
 
     try:
