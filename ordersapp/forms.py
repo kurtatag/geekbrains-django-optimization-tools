@@ -17,7 +17,7 @@ class OrderForm(ModelForm):
 class OrderItemForm(ModelForm):
     class Meta:
         model = OrderItem
-        fields = ()
+        exclude = ()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

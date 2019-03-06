@@ -34,5 +34,9 @@ class Cart(models.Model):
     def product_price_total(self):
         return self.quantity * self.product.price
 
+    @classmethod
+    def get_cart_items(cls, user):
+        return cls.objects.filter(user=user)
+
     def __str__(self):
         return f"{self.product} - {self.quantity} items"
