@@ -1,4 +1,3 @@
-from django.http import HttpRequest
 from django.shortcuts import render, HttpResponseRedirect
 from django.contrib import auth
 from django.contrib import messages
@@ -6,77 +5,69 @@ from django.urls import reverse
 from django.core.mail import send_mail
 from django.conf import settings
 from django.db import transaction
+from django.contrib.auth.views import LoginView, LogoutView
+from django.views.generic.base import TemplateView
+from django.views.generic.edit import FormView
 
 from authapp.forms import (ShopUserLoginForm, ShopUserRegisterForm,
                            ShopUserEditForm, ShopUserProfileEditForm)
 from .models import ShopUser
 
 
-def login(request: HttpRequest):
-    title = 'login'
+class Login(LoginView):
+    template_name = 'authapp/login.html'
+    form = ShopUserLoginForm
 
-    login_form = ShopUserLoginForm(data=request.POST or None)
-
-    next = request.GET['next'] if 'next' in request.GET.keys() else ''
-
-    if request.method == 'POST' and login_form.is_valid():
-        username = request.POST['username']
-        password = request.POST['password']
-
-        user = auth.authenticate(username=username, password=password)
-        if user and user.is_active:
-            auth.login(request, user)
-            if 'next' in request.POST.keys():
-                return HttpResponseRedirect(request.POST['next'])
-            else:
-                return HttpResponseRedirect(reverse('index'))
-
-    context = {
-        'title': title,
-        'login_form': login_form,
-        'next': next
-    }
-    return render(request, 'authapp/login.html', context)
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'login'
+        return context
 
 
-def logout(request: HttpRequest):
-    auth.logout(request)
-    return HttpResponseRedirect(reverse('index'))
+class Logout(LogoutView):
+    next_page = '/auth/login/'
 
 
-def register(request: HttpRequest):
-    title = 'register user'
+class Register(FormView):
+    template_name = 'authapp/register.html'
+    form_class = ShopUserRegisterForm
 
-    if request.method == 'POST':
-        register_form = ShopUserRegisterForm(request.POST, request.FILES)
+    def form_valid(self, form):
+        user = form.save()
+        if send_verify_mail(user):
+            messages.success(self.request, 'Confirmation email was successfully sent.')
+            return HttpResponseRedirect(reverse('auth:login'))
+        else:
+            messages.error(self.request, 'Problem while sending confirmation email.')
+            return HttpResponseRedirect(reverse('auth:register'))
 
-        if register_form.is_valid():
-            user = register_form.save()
-            if send_verify_mail(user):
-                messages.success(request, 'Confirmation email was successfully sent.')
-                return HttpResponseRedirect(reverse('auth:login'))
-            else:
-                messages.error(request, 'Problem while sending confirmation email.')
-                return HttpResponseRedirect(reverse('auth:register'))
-    else:
-        register_form = ShopUserRegisterForm()
-
-    context = {
-        'title': title,
-        'register_form': register_form
-    }
-    return render(request, 'authapp/register.html', context)
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'register user'
+        return context
 
 
-@transaction.atomic
-def edit(request: HttpRequest):
-    title = 'edit user'
+class EditUser(TemplateView):
 
-    if request.method == 'POST':
+    def get(self, request, *args, **kwargs):
+        edit_form = ShopUserEditForm(instance=request.user)
+        profile_form = ShopUserProfileEditForm(
+            instance=request.user.shopuserprofile
+        )
+
+        context = {
+            'title': 'edit user',
+            'edit_form': edit_form,
+            'profile_form': profile_form,
+        }
+        return render(request, 'authapp/edit.html', context)
+
+    @transaction.atomic
+    def post(self, request, *args, **kwargs):
         edit_form = ShopUserEditForm(request.POST, request.FILES,
-                                         instance=request.user)
+                                     instance=request.user)
         profile_form = ShopUserProfileEditForm(request.POST,
-                                        instance=request.user.shopuserprofile)
+                                               instance=request.user.shopuserprofile)
 
         if edit_form.is_valid() and profile_form.is_valid():
             edit_form.save()
@@ -84,18 +75,33 @@ def edit(request: HttpRequest):
             return HttpResponseRedirect(reverse('auth:edit'))
         else:
             messages.error(request, 'User info was not updated.')
-    else:
-        edit_form = ShopUserEditForm(instance=request.user)
-        profile_form = ShopUserProfileEditForm(
-            instance=request.user.shopuserprofile
-        )
 
-    context = {
-        'title': title,
-        'edit_form': edit_form,
-        'profile_form': profile_form,
-    }
-    return render(request, 'authapp/edit.html', context)
+
+class Verify(TemplateView):
+    template_name = 'authapp/verification.html'
+
+    def get(self, *args, **kwargs):
+        request = self.request
+        email = self.kwargs['email']
+        activation_key = self.kwargs['activation_key']
+        try:
+            user = ShopUser.objects.get(email=email)
+            if user.activation_key == activation_key and not user.is_activation_key_expired():
+                user.is_active = True
+                user.save()
+                auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+                return render(request, 'authapp/verification.html', self.get_context_data())
+            else:
+                messages.error(request, f'Error while activating user {user}.')
+                return render(request, 'authapp/verification.html', self.get_context_data())
+        except Exception as e:
+            messages.error(request, f'Error while activating user:\n{e}\n {e.args}')
+            return HttpResponseRedirect(reverse('index'))
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'user verification'
+        return context
 
 
 def send_verify_mail(user):
@@ -117,23 +123,3 @@ def send_verify_mail(user):
         [user.email],
         fail_silently=False
     )
-
-
-def verify(request: HttpRequest, email: str, activation_key: str):
-    context = {
-        'title': 'user verification',
-    }
-
-    try:
-        user = ShopUser.objects.get(email=email)
-        if user.activation_key == activation_key and not user.is_activation_key_expired():
-            user.is_active = True
-            user.save()
-            auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-            return render(request, 'authapp/verification.html', context)
-        else:
-            messages.error(request, f'Error while activating user {user}.')
-            return render(request, 'authapp/verification.html', context)
-    except Exception as e:
-        messages.error(request, f'Error while activating user:\n{e}\n {e.args}')
-        return HttpResponseRedirect(reverse('index'))
