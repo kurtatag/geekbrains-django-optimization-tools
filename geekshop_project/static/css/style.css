@@ -1325,7 +1325,7 @@ a {
     font-weight: 300;
 }
 
-button[class*=btn] {
+button[class*=-btn] {
     width: 30px;
     height: 30px;
     background-color: #E1E8EE;
