@@ -1,0 +1,68 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+{% block menu %}
+    <div class="hero padding-site">
+        {% include 'mainapp/includes/inc_site_navigation.html' %}
+        <h1 class="hero-title">Order List Page</h1>
+    </div>
+{% endblock menu %}
+
+{% block content %}
+    <div class="bootstrap-iso">
+        <div class="h2 text-center head">
+            Your orders,
+            {% if user.first_name %}
+                {{ user.first_name|title }}
+            {% else %}
+                {{ user }}
+            {% endif %}
+        </div>
+        <table class="table orders_list">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Created</th>
+                <th>Last Updated</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in object_list %}
+                {% if item.is_active %}
+                    <tr>
+                        <td class="td1 orders_list">{{ item.pk }}</td>
+                        <td>{{ item.created|date:"Y-m-d H:i:s" }}</td>
+                        <td>{{ item.updated|date:"Y-m-d H:i:s" }}</td>
+                        <td>{{ item.get_status_display }}</td>
+                        <td>
+                            <a href="{% url 'ordersapp:order_read' item.pk %}">
+                                View Details
+                            </a>
+                        </td>
+                        <td>
+                            {% if item.status == 'FM' %}
+                                <a href="{% url 'ordersapp:order_update' item.pk %}">
+                                    Edit
+                                </a>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if item.status == 'FM' %}
+                                <a href="{% url 'ordersapp:order_delete' item.pk %}">
+                                    Delete
+                                </a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+            </tbody>
+        </table>
+        <button class="btn btn-default btn-round">
+            <a href="{% url 'ordersapp:order_create' %}">
+                New Order
+            </a>
+        </button>
+    </div>
+{% endblock %}

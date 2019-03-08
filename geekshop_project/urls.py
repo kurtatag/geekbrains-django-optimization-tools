@@ -26,6 +26,7 @@ urlpatterns = [
     path('contact/', mainapp_views.contact, name='contact'),
     path('auth/', include('authapp.urls', namespace='auth')),
     path('cart/', include('cartapp.urls', namespace='cart')),
+    path('order/', include('ordersapp.urls', namespace='order')),
     path('social/', include('social_django.urls', namespace='social')),
 
     # path('admin/', admin.site.urls),

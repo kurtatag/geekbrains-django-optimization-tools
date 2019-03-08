@@ -1,0 +1,25 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+{% block menu %}
+    <div class="hero padding-site">
+        {% include 'mainapp/includes/inc_site_navigation.html' %}
+        <h1 class="hero-title">Delete Order</h1>
+    </div>
+{% endblock menu %}
+
+{% block content %}
+    <div class="bootstrap-iso">
+        <div class="category_delete">
+            <div class="h1">Are you sure you want to delete the order?</div>
+            {% include 'ordersapp/includes/inc_order_summary.html' %}
+            <form action="{% url 'ordersapp:order_delete' object.pk %}" method="post">
+                {% csrf_token %}
+                <input class="btn btn-danger" type="submit" value="Delete">
+            </form>
+            <button class="btn btn-success">
+                <a href="{% url 'ordersapp:orders_list' %}">Cancel</a>
+            </button>
+        </div>
+    </div>
+{% endblock %}

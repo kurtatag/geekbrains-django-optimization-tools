@@ -13,7 +13,7 @@
     <form action="{% url 'auth:register' %}" method="post" enctype="multipart/form-data">
         <div class="form-container">
             {% csrf_token %}
-            {{ register_form }}
+            {{ form }}
             <button type="submit" class="submit-button">Register</button>
         </div>
     </form>

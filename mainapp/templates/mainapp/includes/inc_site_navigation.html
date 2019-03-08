@@ -25,10 +25,25 @@
             </li>
         {% endif %}
 
-        <li class="menu-list">
-            {% if request.user.is_authenticated %}
-                <a href="{% url 'auth:logout' %}" class="menu-link">Logout</a>
-            {% else %}
+        {% if request.user.is_authenticated %}
+            <li class="menu-list">
+                <div class="menu-dropdown">
+                  <span class="{% if request.resolver_match.view_name == 'auth:edit' or 'order' in request.path %}
+                    menu-dropdown-link-active
+                  {% else %}
+                    menu-dropdown-link
+                  {% endif %}">
+                      {{ user.first_name | default:user }}
+                  </span>
+                  <div class="menu-dropdown-content">
+                      <a href="{% url 'auth:edit' %}">Edit User</a>
+                      <a href="{% url 'order:orders_list' %}">Orders</a>
+                      <a href="{% url 'auth:logout' %}">Logout</a>
+                  </div>
+                </div>
+            </li>
+        {% else %}
+            <li class="menu-list">
                 <a href="{% url 'auth:login' %}"
                    class="{% if request.resolver_match.view_name == 'auth:login' %}
                             menu-link-active
@@ -37,22 +52,15 @@
                           {% endif %}">
                     Login
                 </a>
-            {% endif %}
-        </li>
-
-        {% if request.user.is_authenticated %}
+            </li>
             <li class="menu-list">
-                <a href="{% url 'auth:edit' %}"
-                   class="{% if request.resolver_match.view_name == link.path_name %}
+                <a href="{% url 'auth:register' %}"
+                   class="{% if request.resolver_match.view_name == 'auth:register' %}
                             menu-link-active
                           {% else %}
                             menu-link
                           {% endif %}">
-                    User({% if request.user.first_name %}
-                                {{ request.user.first_name }}
-                            {% else %}
-                                {{ request.user }}
-                            {% endif %})
+                    Register
                 </a>
             </li>
         {% endif %}
@@ -70,6 +78,12 @@
                         <span id="cart-items-total">{{ cart_info.items_total }}</span> item(s) for
                         <span id="cart-price-total">${{ cart_info.price_total }}</span>
                     </span>
+                </a>
+            </li>
+        {% else %}
+            <li class="menu-list cart">
+                <a href="{% url 'cart:view' %}" >
+                    <i class="fas fa-shopping-cart"></i>
                 </a>
             </li>
         {% endif %}

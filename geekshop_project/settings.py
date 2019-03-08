@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'authapp',
     'cartapp',
     'adminapp',
+    'ordersapp',
     'social_django'
 ]
 
@@ -199,3 +200,7 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.load_extra_data',
     'social_core.pipeline.user.user_details',
 )
+
+
+LOGIN_REDIRECT_URL = '/'
+# LOGOUT_REDIRECT_URL = '/auth/login/'
