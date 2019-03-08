@@ -79,7 +79,6 @@ class OrderItemsCreate(CreateView):
         return super().form_valid(form)
 
 
-
 class OrderRead(DetailView):
     model = Order
 
