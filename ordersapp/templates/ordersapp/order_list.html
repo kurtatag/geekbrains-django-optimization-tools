@@ -11,7 +11,7 @@
 {% block content %}
     <div class="bootstrap-iso">
         <div class="h2 text-center head">
-            Ваши заказы,
+            Your orders,
             {% if user.first_name %}
                 {{ user.first_name|title }}
             {% else %}
@@ -22,9 +22,9 @@
             <thead>
             <tr>
                 <th>ID</th>
-                <th>Создан</th>
-                <th>Обновлен</th>
-                <th>Статус</th>
+                <th>Created</th>
+                <th>Last Updated</th>
+                <th>Status</th>
             </tr>
             </thead>
             <tbody>
@@ -37,20 +37,20 @@
                         <td>{{ item.get_status_display }}</td>
                         <td>
                             <a href="{% url 'ordersapp:order_read' item.pk %}">
-                                посмотреть
+                                View Details
                             </a>
                         </td>
                         <td>
                             {% if item.status == 'FM' %}
                                 <a href="{% url 'ordersapp:order_update' item.pk %}">
-                                    редактировать
+                                    Edit
                                 </a>
                             {% endif %}
                         </td>
                         <td>
                             {% if item.status == 'FM' %}
                                 <a href="{% url 'ordersapp:order_delete' item.pk %}">
-                                    удалить
+                                    Delete
                                 </a>
                             {% endif %}
                         </td>
@@ -60,13 +60,8 @@
             </tbody>
         </table>
         <button class="btn btn-default btn-round">
-            <a href="{% url 'index' %}">
-                на главную
-            </a>
-        </button>
-        <button class="btn btn-default btn-round">
             <a href="{% url 'ordersapp:order_create' %}">
-                новый
+                New Order
             </a>
         </button>
     </div>

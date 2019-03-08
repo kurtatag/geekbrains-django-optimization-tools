@@ -11,14 +11,14 @@
 {% block content %}
     <div class="bootstrap-iso">
         <div class="category_delete">
-            <div class="h1">Уверены, что хотите удалить?</div>
+            <div class="h1">Are you sure you want to delete the order?</div>
             {% include 'ordersapp/includes/inc_order_summary.html' %}
             <form action="{% url 'ordersapp:order_delete' object.pk %}" method="post">
                 {% csrf_token %}
-                <input class="btn btn-danger" type="submit" value="удалить">
+                <input class="btn btn-danger" type="submit" value="Delete">
             </form>
             <button class="btn btn-success">
-                <a href="{% url 'ordersapp:orders_list' %}">отмена</a>
+                <a href="{% url 'ordersapp:orders_list' %}">Cancel</a>
             </button>
         </div>
     </div>
