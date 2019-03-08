@@ -80,6 +80,12 @@
                     </span>
                 </a>
             </li>
+        {% else %}
+            <li class="menu-list cart">
+                <a href="{% url 'cart:view' %}" >
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </li>
         {% endif %}
     </ul>
 </div>
