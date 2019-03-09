@@ -1,4 +1,4 @@
-from django.forms import ModelForm
+from django.forms import ModelForm, CharField
 from ordersapp.models import Order, OrderItem
 
 
@@ -15,6 +15,8 @@ class OrderForm(ModelForm):
 
 
 class OrderItemForm(ModelForm):
+    price = CharField(label='Price', required=False)
+
     class Meta:
         model = OrderItem
         exclude = ()
