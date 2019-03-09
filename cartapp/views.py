@@ -40,11 +40,8 @@ def cart_add(request: HttpRequest, pk: int):
 
 @login_required
 def cart_remove(request: HttpRequest, pk: int):
-    with transaction.atomic():
-        cart_product = get_object_or_404(Cart, pk=pk)
-        cart_product.product.quantity += cart_product.quantity
-        cart_product.product.save()
-        cart_product.delete()
+    cart_product = get_object_or_404(Cart, pk=pk)
+    cart_product.delete()
 
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 

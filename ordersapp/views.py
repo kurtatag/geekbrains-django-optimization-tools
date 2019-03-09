@@ -67,7 +67,8 @@ class OrderItemsCreate(CreateView):
 
         with transaction.atomic():
             form.instance.user = self.request.user
-            cart_items.delete()
+            for item in cart_items:
+                item.delete()
             self.object = form.save()
             if orderitems.is_valid():
                 orderitems.instance = self.object

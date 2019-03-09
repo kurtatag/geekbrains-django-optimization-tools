@@ -50,5 +50,11 @@ class Cart(models.Model):
             self.product.save()
             super().save(*args, **kwargs)
 
+    def delete(self, *args, **kwargs):
+        with transaction.atomic():
+            self.product.quantity += self.quantity
+            self.product.save()
+            super().delete(*args, **kwargs)
+
     def __str__(self):
         return f"{self.product} - {self.quantity} items"
