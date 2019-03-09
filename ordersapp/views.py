@@ -4,6 +4,8 @@ from django.urls import reverse_lazy, reverse
 from django.forms import inlineformset_factory
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
+from django.dispatch import receiver
+from django.db.models.signals import pre_delete
 
 from cartapp.models import Cart
 from ordersapp.forms import OrderItemForm
@@ -132,3 +134,9 @@ class OrderItemsUpdate(UpdateView):
 class OrderDelete(DeleteView):
     model = Order
     success_url = reverse_lazy('order:orders_list')
+
+
+@receiver(pre_delete, sender=OrderItem)
+def product_quantity_update(sender, instance, **kwargs):
+    instance.product.quantity += instance.quantity
+    instance.product.save()

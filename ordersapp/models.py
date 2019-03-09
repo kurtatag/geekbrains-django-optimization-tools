@@ -93,10 +93,3 @@ class OrderItem(models.Model):
             self.product.quantity -= quantity_delta
             self.product.save()
             super().save(*args, **kwargs)
-
-    # overwrite parent method
-    def delete(self):
-        self.product.quantity += self.quantity
-        self.product.save()
-
-        super().delete()
