@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from django.db import transaction
 
 from mainapp.models import Product
 
@@ -37,6 +38,17 @@ class Cart(models.Model):
     @classmethod
     def get_cart_items(cls, user):
         return cls.objects.filter(user=user)
+
+    def save(self, *args, **kwargs):
+        with transaction.atomic():
+            if self.pk:
+                quantity_delta = self.quantity - Cart.objects.get(pk=self.pk).quantity
+            else:
+                quantity_delta = self.quantity
+
+            self.product.quantity -= quantity_delta
+            self.product.save()
+            super().save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.product} - {self.quantity} items"
