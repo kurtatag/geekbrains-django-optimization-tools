@@ -25,13 +25,13 @@ def cart_add(request: HttpRequest, pk: int):
     with transaction.atomic():
         product = get_object_or_404(Product, pk=pk)
 
-        cart = Cart.objects.filter(user=request.user, product=product).first()
+        cart_product = Cart.objects.filter(user=request.user, product=product).first()
 
-        if not cart:
-            cart = Cart(user=request.user, product=product)
+        if not cart_product:
+            cart_product = Cart(user=request.user, product=product)
 
-        cart.quantity += 1
-        cart.save()
+        cart_product.quantity += 1
+        cart_product.save()
 
         product.quantity -= 1
         product.save()
