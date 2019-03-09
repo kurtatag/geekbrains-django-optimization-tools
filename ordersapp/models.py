@@ -1,6 +1,7 @@
 from django.db import models
-
+from django.db import transaction
 from django.conf import settings
+
 from mainapp.models import Product
 
 
@@ -80,3 +81,22 @@ class OrderItem(models.Model):
 
     def get_product_cost(self):
         return self.product.price * self.quantity
+
+    # overwrite parent method
+    def save(self, *args, **kwargs):
+        with transaction.atomic():
+            if self.pk:
+                quantity_delta = self.quantity - OrderItem.objects.get(pk=self.pk).quantity
+            else:
+                quantity_delta = self.quantity
+
+            self.product.quantity -= quantity_delta
+            self.product.save()
+            super().save(*args, **kwargs)
+
+    # overwrite parent method
+    def delete(self):
+        self.product.quantity += self.quantity
+        self.product.save()
+
+        super().delete()
