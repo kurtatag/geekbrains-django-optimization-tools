@@ -8,4 +8,5 @@ urlpatterns = [
     path('', mainapp_views.products, name='index'),
     path('<int:product_id>/', mainapp_views.product_details, name='product_details'),
     path('<str:current_product_category>/', mainapp_views.products, name='category'),
+    path('price/<int:product_id>/json/', mainapp_views.ProductPrice.as_view(), name='product_price'),
 ]
