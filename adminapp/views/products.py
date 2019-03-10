@@ -62,7 +62,7 @@ class ProductDetail(DetailView):
 
     def get_product_data(self):
         fields_to_show = ['id', 'name', 'short_description',
-                          'description', 'image']
+                          'description', 'image', 'price', 'quantity']
         return model_to_dict(self.object, fields_to_show)
 
     @method_decorator(user_passes_test(lambda user: user.is_superuser))
