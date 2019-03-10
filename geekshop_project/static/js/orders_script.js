@@ -37,8 +37,8 @@ window.onload = function () {
 
 
     $('.formset_row').formset({
-        addText: 'добавить продукт',
-        deleteText: 'удалить',
+        addText: 'add new product',
+        deleteText: 'delete',
         prefix: 'orderitems',
         removed: calculate_totals,
     });
