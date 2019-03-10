@@ -1,7 +1,11 @@
 {% if object %}
     <div class="h2">Order {{ object.pk }} from {{ object.created|date:"Y-m-d H:i:s" }}</div>
     <hr>
-    <div class="h4">Customer: {{ user.last_name }} {{ user.first_name }}</div>
+    {% if user.first_name %}
+        <div class="h4">Customer: {{ user.last_name }} {{ user.first_name }} </div>
+    {% else %}
+        <div class="h4">Customer: {{ user }}</div>
+    {% endif %}
     <div class="h4">Last Updated: {{ object.updated|date:"Y-m-d H:i:s" }}</div>
     <div class="h4">Status: {{ object.get_status_display }}</div>
     <hr>
