@@ -22,19 +22,15 @@ def cart(request: HttpRequest):
 
 @login_required
 def cart_add(request: HttpRequest, pk: int):
-    with transaction.atomic():
-        product = get_object_or_404(Product, pk=pk)
+    product = get_object_or_404(Product, pk=pk)
 
-        cart = Cart.objects.filter(user=request.user, product=product).first()
+    cart_product = Cart.objects.filter(user=request.user, product=product).first()
 
-        if not cart:
-            cart = Cart(user=request.user, product=product)
+    if not cart_product:
+        cart_product = Cart(user=request.user, product=product)
 
-        cart.quantity += 1
-        cart.save()
-
-        product.quantity -= 1
-        product.save()
+    cart_product.quantity += 1
+    cart_product.save()
 
     if 'login' in request.META.get('HTTP_REFERER'):
         return HttpResponseRedirect(reverse('products:product_details', args=[pk]))
@@ -44,28 +40,18 @@ def cart_add(request: HttpRequest, pk: int):
 
 @login_required
 def cart_remove(request: HttpRequest, pk: int):
-    with transaction.atomic():
-        cart_product = get_object_or_404(Cart, pk=pk)
-        cart_product.product.quantity += cart_product.quantity
-        cart_product.product.save()
-        cart_product.delete()
+    cart_product = get_object_or_404(Cart, pk=pk)
+    cart_product.delete()
 
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
 @login_required
 def cart_edit(request: HttpRequest, pk: int, quantity: int):
-    with transaction.atomic():
-        cart_product = Cart.objects.get(pk=int(pk))
-        product = cart_product.product
+    cart_product = Cart.objects.get(pk=int(pk))
 
-        quantity_delta = int(quantity) - cart_product.quantity
-
-        cart_product.quantity = int(quantity)
-        cart_product.save()
-
-        product.quantity -= quantity_delta
-        product.save()
+    cart_product.quantity = int(quantity)
+    cart_product.save()
 
     data = {
         'product_price_total': cart_product.product_price_total,

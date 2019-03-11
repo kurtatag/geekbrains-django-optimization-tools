@@ -4,6 +4,8 @@ from django.urls import reverse_lazy, reverse
 from django.forms import inlineformset_factory
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
+from django.dispatch import receiver
+from django.db.models.signals import pre_delete
 
 from cartapp.models import Cart
 from ordersapp.forms import OrderItemForm
@@ -54,6 +56,7 @@ class OrderItemsCreate(CreateView):
                 for num, form in enumerate(formset.forms):
                     form.initial['product'] = cart_items[num].product
                     form.initial['quantity'] = cart_items[num].quantity
+                    form.initial['price'] = cart_items[num].product.price
             else:
                 formset = OrderFormSet()
 
@@ -67,7 +70,8 @@ class OrderItemsCreate(CreateView):
 
         with transaction.atomic():
             form.instance.user = self.request.user
-            cart_items.delete()
+            for item in cart_items:
+                item.delete()
             self.object = form.save()
             if orderitems.is_valid():
                 orderitems.instance = self.object
@@ -107,7 +111,11 @@ class OrderItemsUpdate(UpdateView):
         if self.request.POST:
             data['orderitems'] = OrderFormSet(self.request.POST, instance=self.object)
         else:
-            data['orderitems'] = OrderFormSet(instance=self.object)
+            formset = OrderFormSet(instance=self.object)
+            for form in formset.forms:
+                if form.instance.pk:
+                    form.initial['price'] = form.instance.product.price
+            data['orderitems'] = formset
 
         return data
 
@@ -131,3 +139,9 @@ class OrderItemsUpdate(UpdateView):
 class OrderDelete(DeleteView):
     model = Order
     success_url = reverse_lazy('order:orders_list')
+
+
+@receiver(pre_delete, sender=OrderItem)
+def product_quantity_update(sender, instance, **kwargs):
+    instance.product.quantity += instance.quantity
+    instance.product.save()

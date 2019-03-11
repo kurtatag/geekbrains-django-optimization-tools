@@ -22,7 +22,7 @@ class Command(BaseCommand):
                     short_description='Seat and back with upholstery made of cold cure foam',
                     description='Seat and back with upholstery made of cold cure foam. ' * 5,
                     image=f'products_images/product-{counter % 6 + 1}.jpg',
-                    price=100,
+                    price=100 + counter + 1,
                     quantity=100,
                     category=category
                 ).save()

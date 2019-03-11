@@ -1,6 +1,7 @@
 from django.db import models
-
+from django.db import transaction
 from django.conf import settings
+
 from mainapp.models import Product
 
 
@@ -52,7 +53,7 @@ class Order(models.Model):
         items = self.orderitems.select_related()
         return sum(list(map(lambda x: x.get_product_cost(), items)))
 
-    # we overwrite patent method
+    # we overwrite parent method
     def delete(self):
         for item in self.orderitems.select_related():
             item.product.quantity += item.quantity
@@ -80,3 +81,15 @@ class OrderItem(models.Model):
 
     def get_product_cost(self):
         return self.product.price * self.quantity
+
+    # overwrite parent method
+    def save(self, *args, **kwargs):
+        with transaction.atomic():
+            if self.pk:
+                quantity_delta = self.quantity - OrderItem.objects.get(pk=self.pk).quantity
+            else:
+                quantity_delta = self.quantity
+
+            self.product.quantity -= quantity_delta
+            self.product.save()
+            super().save(*args, **kwargs)

@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpRequest
+from django.http import HttpRequest, JsonResponse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.views.generic.detail import View
 
 from .models import Product, ProductCategory
 
@@ -82,3 +83,15 @@ def contact(request: HttpRequest):
         'title': 'contact',
     }
     return render(request, 'mainapp/contact.html', context)
+
+
+class ProductPrice(View):
+    def get(self, request, product_id):
+
+        price = get_object_or_404(Product, pk=product_id).price
+
+        data = {
+            'price': price
+        }
+
+        return JsonResponse(data)
