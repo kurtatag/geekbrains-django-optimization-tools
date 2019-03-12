@@ -204,3 +204,9 @@ SOCIAL_AUTH_PIPELINE = (
 
 LOGIN_REDIRECT_URL = '/'
 # LOGOUT_REDIRECT_URL = '/auth/login/'
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
