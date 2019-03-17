@@ -1,0 +1,3477 @@
+** SIEGE 4.0.4: debugging enabled
+
+Copyright (C) 2017 by Jeffrey Fulmer, et al.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.
+
+** Preparing 1 concurrent users for battle.
+The server is now under siege...[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET / HTTP/1.1
+Host: geekshop
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:26 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+X-Frame-Options: SAMEORIGIN
+Vary: Cookie
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to code.jquery.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     code.jquery.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  code.jquery.com:443
+GET /jquery-3.2.1.js HTTP/1.1
+Host: code.jquery.com
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Connection: close
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Content-Length: 79082
+Content-Type: application/javascript; charset=utf-8
+Last-Modified: Mon, 20 Mar 2017 19:01:15 GMT
+Server: nginx
+ETag: W/"58d026fb-41707"
+Cache-Control: max-age=315360000
+Cache-Control: public
+Access-Control-Allow-Origin: *
+Vary: Accept-Encoding
+X-HW: 1552777706.dop002.sk1.t,1552777707.cds052.sk1.shn,1552777707.dop002.sk1.t,1552777707.cds028.sk1.c
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/social-links.png HTTP/1.1
+Host: geekshop
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Content-Type: image/png
+Content-Length: 887
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-377"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/google-play.jpg HTTP/1.1
+Host: geekshop
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Content-Type: image/jpeg
+Content-Length: 5287
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-14a7"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/app-store.jpg HTTP/1.1
+Host: geekshop
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Content-Type: image/jpeg
+Content-Length: 4461
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-116d"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/arrow.svg HTTP/1.1
+Host: geekshop
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Content-Type: image/svg+xml
+Content-Length: 355
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-163"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/logo.svg HTTP/1.1
+Host: geekshop
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Content-Type: image/svg+xml
+Content-Length: 1348
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-544"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/style.css HTTP/1.1
+Host: geekshop
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Content-Type: text/css
+Content-Length: 27551
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-6b9f"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/bootstrap-iso.css HTTP/1.1
+Host: geekshop
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Content-Type: text/css
+Content-Length: 202858
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-3186a"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  use.fontawesome.com:443
+GET /releases/v5.6.3/css/all.css HTTP/1.1
+Host: use.fontawesome.com
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Content-Type: text/css
+Transfer-Encoding: chunked
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET
+Access-Control-Max-Age: 3000
+Last-Modified: Thu, 20 Dec 2018 17:45:13 GMT
+ETag: W/"dc93d584e41f8417f6b7163320d34329"
+Cache-Control: max-age=31556926
+Server: NetDNA-cache/2.2
+Vary: Origin, Access-Control-Request-Headers, Access-Control-Request-Method, Accept-Encoding
+X-Cache: HIT
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  fonts.googleapis.com:443
+GET /css?family=Montserrat:100,300,400,500,700 HTTP/1.1
+Host: fonts.googleapis.com
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Content-Type: text/css; charset=utf-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Expires: Sat, 16 Mar 2019 23:08:27 GMT
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Cache-Control: private, max-age=86400
+Server: ESF
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
+Accept-Ranges: none
+Vary: Accept-Encoding
+Connection: close
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /admin/ HTTP/1.1
+Host: geekshop
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 302 Found
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+Connection: close
+Location: /auth/login/?next=/admin/
+X-Frame-Options: SAMEORIGIN
+Vary: Cookie
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /auth/login/?next=/admin/ HTTP/1.1
+Host: geekshop
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+Expires: Sat, 16 Mar 2019 23:08:27 GMT
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Vary: Cookie
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: csrftoken=uaWBTQ6nyvqIWzMOcvNnAmGwU3ckeLwcqvdMGlCFhscryxEnM4nrIHw6n6VD34Ku; expires=Sat, 14 Mar 2020 23:08:27 GMT; Max-Age=31449600; Path=/; SameSite=Lax
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to code.jquery.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     code.jquery.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  code.jquery.com:443
+GET /jquery-3.2.1.js HTTP/1.1
+Host: code.jquery.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Connection: close
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Content-Length: 79082
+Content-Type: application/javascript; charset=utf-8
+Last-Modified: Mon, 20 Mar 2017 19:01:15 GMT
+Server: nginx
+ETag: W/"58d026fb-41707"
+Cache-Control: max-age=315360000
+Cache-Control: public
+Access-Control-Allow-Origin: *
+Vary: Accept-Encoding
+X-HW: 1552777707.dop009.sk1.t,1552777707.cds019.sk1.shn,1552777707.dop009.sk1.t,1552777707.cds028.sk1.c
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/social-links.png HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Content-Type: image/png
+Content-Length: 887
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-377"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/logo.svg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Content-Type: image/svg+xml
+Content-Length: 1348
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-544"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/style.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Content-Type: text/css
+Content-Length: 27551
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-6b9f"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/bootstrap-iso.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Content-Type: text/css
+Content-Length: 202858
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-3186a"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  use.fontawesome.com:443
+GET /releases/v5.6.3/css/all.css HTTP/1.1
+Host: use.fontawesome.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Content-Type: text/css
+Transfer-Encoding: chunked
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET
+Access-Control-Max-Age: 3000
+Last-Modified: Thu, 20 Dec 2018 17:45:13 GMT
+ETag: W/"dc93d584e41f8417f6b7163320d34329"
+Cache-Control: max-age=31556926
+Server: NetDNA-cache/2.2
+Vary: Origin, Access-Control-Request-Headers, Access-Control-Request-Method, Accept-Encoding
+X-Cache: HIT
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  fonts.googleapis.com:443
+GET /css?family=Montserrat:100,300,400,500,700 HTTP/1.1
+Host: fonts.googleapis.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Content-Type: text/css; charset=utf-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Expires: Sat, 16 Mar 2019 23:08:27 GMT
+Date: Sat, 16 Mar 2019 23:08:27 GMT
+Cache-Control: private, max-age=86400
+Server: ESF
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
+Accept-Ranges: none
+Vary: Accept-Encoding
+Connection: close
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /admin/categories/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 302 Found
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:28 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+Connection: close
+Location: /auth/login/?next=/admin/categories/
+X-Frame-Options: SAMEORIGIN
+Vary: Cookie
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /auth/login/?next=/admin/categories/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:28 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+Expires: Sat, 16 Mar 2019 23:08:28 GMT
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Vary: Cookie
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: csrftoken=kU5EnPvpuZS4y44ILdyuJoIHqoql71DTBCwxz1H666kmnTU59oCEGidcsRrfyjs8; expires=Sat, 14 Mar 2020 23:08:28 GMT; Max-Age=31449600; Path=/; SameSite=Lax
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to code.jquery.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     code.jquery.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  code.jquery.com:443
+GET /jquery-3.2.1.js HTTP/1.1
+Host: code.jquery.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:29 GMT
+Connection: close
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Content-Length: 79082
+Content-Type: application/javascript; charset=utf-8
+Last-Modified: Mon, 20 Mar 2017 19:01:15 GMT
+Server: nginx
+ETag: W/"58d026fb-41707"
+Cache-Control: max-age=315360000
+Cache-Control: public
+Access-Control-Allow-Origin: *
+Vary: Accept-Encoding
+X-HW: 1552777709.dop009.sk1.t,1552777709.cds049.sk1.shn,1552777709.dop009.sk1.t,1552777709.cds028.sk1.c
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/social-links.png HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:29 GMT
+Content-Type: image/png
+Content-Length: 887
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-377"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/logo.svg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:29 GMT
+Content-Type: image/svg+xml
+Content-Length: 1348
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-544"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/style.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:29 GMT
+Content-Type: text/css
+Content-Length: 27551
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-6b9f"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/bootstrap-iso.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:29 GMT
+Content-Type: text/css
+Content-Length: 202858
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-3186a"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  use.fontawesome.com:443
+GET /releases/v5.6.3/css/all.css HTTP/1.1
+Host: use.fontawesome.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:29 GMT
+Content-Type: text/css
+Transfer-Encoding: chunked
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET
+Access-Control-Max-Age: 3000
+Last-Modified: Thu, 20 Dec 2018 17:45:13 GMT
+ETag: W/"dc93d584e41f8417f6b7163320d34329"
+Cache-Control: max-age=31556926
+Server: NetDNA-cache/2.2
+Vary: Origin, Access-Control-Request-Headers, Access-Control-Request-Method, Accept-Encoding
+X-Cache: HIT
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  fonts.googleapis.com:443
+GET /css?family=Montserrat:100,300,400,500,700 HTTP/1.1
+Host: fonts.googleapis.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Content-Type: text/css; charset=utf-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Expires: Sat, 16 Mar 2019 23:08:29 GMT
+Date: Sat, 16 Mar 2019 23:08:29 GMT
+Cache-Control: private, max-age=86400
+Server: ESF
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
+Accept-Ranges: none
+Vary: Accept-Encoding
+Connection: close
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /admin/categories/read/1/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 302 Found
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:30 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+Connection: close
+Location: /auth/login/?next=/admin/categories/read/1/
+X-Frame-Options: SAMEORIGIN
+Vary: Cookie
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /auth/login/?next=/admin/categories/read/1/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:30 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+Expires: Sat, 16 Mar 2019 23:08:30 GMT
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Vary: Cookie
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: csrftoken=32j5dW1aFjvuwHbhWfkQSToT39OVRVq91nlBfovurY9KRaIU8LlOSnYOVPDua9eH; expires=Sat, 14 Mar 2020 23:08:30 GMT; Max-Age=31449600; Path=/; SameSite=Lax
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to code.jquery.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     code.jquery.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  code.jquery.com:443
+GET /jquery-3.2.1.js HTTP/1.1
+Host: code.jquery.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:30 GMT
+Connection: close
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Content-Length: 79082
+Content-Type: application/javascript; charset=utf-8
+Last-Modified: Mon, 20 Mar 2017 19:01:15 GMT
+Server: nginx
+ETag: W/"58d026fb-41707"
+Cache-Control: max-age=315360000
+Cache-Control: public
+Access-Control-Allow-Origin: *
+Vary: Accept-Encoding
+X-HW: 1552777710.dop002.sk1.t,1552777710.cds007.sk1.shn,1552777710.dop002.sk1.t,1552777710.cds028.sk1.c
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/social-links.png HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:30 GMT
+Content-Type: image/png
+Content-Length: 887
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-377"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/logo.svg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:30 GMT
+Content-Type: image/svg+xml
+Content-Length: 1348
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-544"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/style.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:30 GMT
+Content-Type: text/css
+Content-Length: 27551
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-6b9f"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/bootstrap-iso.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:30 GMT
+Content-Type: text/css
+Content-Length: 202858
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-3186a"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  use.fontawesome.com:443
+GET /releases/v5.6.3/css/all.css HTTP/1.1
+Host: use.fontawesome.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:30 GMT
+Content-Type: text/css
+Transfer-Encoding: chunked
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET
+Access-Control-Max-Age: 3000
+Last-Modified: Thu, 20 Dec 2018 17:45:13 GMT
+ETag: W/"dc93d584e41f8417f6b7163320d34329"
+Cache-Control: max-age=31556926
+Server: NetDNA-cache/2.2
+Vary: Origin, Access-Control-Request-Headers, Access-Control-Request-Method, Accept-Encoding
+X-Cache: HIT
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  fonts.googleapis.com:443
+GET /css?family=Montserrat:100,300,400,500,700 HTTP/1.1
+Host: fonts.googleapis.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Content-Type: text/css; charset=utf-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Expires: Sat, 16 Mar 2019 23:08:30 GMT
+Date: Sat, 16 Mar 2019 23:08:30 GMT
+Cache-Control: private, max-age=86400
+Server: ESF
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
+Accept-Ranges: none
+Vary: Accept-Encoding
+Connection: close
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /admin/products/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 302 Found
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:30 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+Connection: close
+Location: /auth/login/?next=/admin/products/
+X-Frame-Options: SAMEORIGIN
+Vary: Cookie
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /auth/login/?next=/admin/products/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:30 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+Expires: Sat, 16 Mar 2019 23:08:30 GMT
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Vary: Cookie
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: csrftoken=m71rIiCwotP6r7zSQmBkzVnMNwYEhfdHlEjDu0k5I5fu2PcO6fGN43obEQPzoOHb; expires=Sat, 14 Mar 2020 23:08:30 GMT; Max-Age=31449600; Path=/; SameSite=Lax
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to code.jquery.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     code.jquery.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  code.jquery.com:443
+GET /jquery-3.2.1.js HTTP/1.1
+Host: code.jquery.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:30 GMT
+Connection: close
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Content-Length: 79082
+Content-Type: application/javascript; charset=utf-8
+Last-Modified: Mon, 20 Mar 2017 19:01:15 GMT
+Server: nginx
+ETag: W/"58d026fb-41707"
+Cache-Control: max-age=315360000
+Cache-Control: public
+Access-Control-Allow-Origin: *
+Vary: Accept-Encoding
+X-HW: 1552777710.dop009.sk1.t,1552777710.cds049.sk1.shn,1552777710.dop009.sk1.t,1552777710.cds028.sk1.c
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/social-links.png HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:30 GMT
+Content-Type: image/png
+Content-Length: 887
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-377"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/logo.svg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:30 GMT
+Content-Type: image/svg+xml
+Content-Length: 1348
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-544"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/style.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:30 GMT
+Content-Type: text/css
+Content-Length: 27551
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-6b9f"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/bootstrap-iso.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:30 GMT
+Content-Type: text/css
+Content-Length: 202858
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-3186a"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  use.fontawesome.com:443
+GET /releases/v5.6.3/css/all.css HTTP/1.1
+Host: use.fontawesome.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:31 GMT
+Content-Type: text/css
+Transfer-Encoding: chunked
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET
+Access-Control-Max-Age: 3000
+Last-Modified: Thu, 20 Dec 2018 17:45:13 GMT
+ETag: W/"dc93d584e41f8417f6b7163320d34329"
+Cache-Control: max-age=31556926
+Server: NetDNA-cache/2.2
+Vary: Origin, Access-Control-Request-Headers, Access-Control-Request-Method, Accept-Encoding
+X-Cache: HIT
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  fonts.googleapis.com:443
+GET /css?family=Montserrat:100,300,400,500,700 HTTP/1.1
+Host: fonts.googleapis.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Content-Type: text/css; charset=utf-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Expires: Sat, 16 Mar 2019 23:08:31 GMT
+Date: Sat, 16 Mar 2019 23:08:31 GMT
+Cache-Control: private, max-age=86400
+Server: ESF
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
+Accept-Ranges: none
+Vary: Accept-Encoding
+Connection: close
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /admin/products/list/home/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 302 Found
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:31 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+Connection: close
+Location: /auth/login/?next=/admin/products/list/home/
+X-Frame-Options: SAMEORIGIN
+Vary: Cookie
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /auth/login/?next=/admin/products/list/home/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:31 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+Expires: Sat, 16 Mar 2019 23:08:31 GMT
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Vary: Cookie
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: csrftoken=Nk0rAzzXNsmh4RS43QDT38twBuImPZIdWHMjHxDaOwJjFySBEpGQXkyxjyqZyQwM; expires=Sat, 14 Mar 2020 23:08:31 GMT; Max-Age=31449600; Path=/; SameSite=Lax
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to code.jquery.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     code.jquery.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  code.jquery.com:443
+GET /jquery-3.2.1.js HTTP/1.1
+Host: code.jquery.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:31 GMT
+Connection: close
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Content-Length: 79082
+Content-Type: application/javascript; charset=utf-8
+Last-Modified: Mon, 20 Mar 2017 19:01:15 GMT
+Server: nginx
+ETag: W/"58d026fb-41707"
+Cache-Control: max-age=315360000
+Cache-Control: public
+Access-Control-Allow-Origin: *
+Vary: Accept-Encoding
+X-HW: 1552777711.dop002.sk1.t,1552777711.cds013.sk1.shn,1552777711.dop002.sk1.t,1552777711.cds028.sk1.c
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/social-links.png HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:31 GMT
+Content-Type: image/png
+Content-Length: 887
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-377"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/logo.svg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:31 GMT
+Content-Type: image/svg+xml
+Content-Length: 1348
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-544"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/style.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:31 GMT
+Content-Type: text/css
+Content-Length: 27551
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-6b9f"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/bootstrap-iso.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:31 GMT
+Content-Type: text/css
+Content-Length: 202858
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-3186a"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  use.fontawesome.com:443
+GET /releases/v5.6.3/css/all.css HTTP/1.1
+Host: use.fontawesome.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:31 GMT
+Content-Type: text/css
+Transfer-Encoding: chunked
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET
+Access-Control-Max-Age: 3000
+Last-Modified: Thu, 20 Dec 2018 17:45:13 GMT
+ETag: W/"dc93d584e41f8417f6b7163320d34329"
+Cache-Control: max-age=31556926
+Server: NetDNA-cache/2.2
+Vary: Origin, Access-Control-Request-Headers, Access-Control-Request-Method, Accept-Encoding
+X-Cache: HIT
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  fonts.googleapis.com:443
+GET /css?family=Montserrat:100,300,400,500,700 HTTP/1.1
+Host: fonts.googleapis.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Content-Type: text/css; charset=utf-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Expires: Sat, 16 Mar 2019 23:08:31 GMT
+Date: Sat, 16 Mar 2019 23:08:31 GMT
+Cache-Control: private, max-age=86400
+Server: ESF
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
+Accept-Ranges: none
+Vary: Accept-Encoding
+Connection: close
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /admin/products/read/1/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 302 Found
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:31 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+Connection: close
+Location: /auth/login/?next=/admin/products/read/1/
+X-Frame-Options: SAMEORIGIN
+Vary: Cookie
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /auth/login/?next=/admin/products/read/1/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:31 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+Expires: Sat, 16 Mar 2019 23:08:31 GMT
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Vary: Cookie
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: csrftoken=Eix6WlbUZhJK7rbhy8gAlqZOupIyJcnFREp54xrnbZ1WPwd3rVDpRmb7v9itwWva; expires=Sat, 14 Mar 2020 23:08:31 GMT; Max-Age=31449600; Path=/; SameSite=Lax
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to code.jquery.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     code.jquery.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  code.jquery.com:443
+GET /jquery-3.2.1.js HTTP/1.1
+Host: code.jquery.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Connection: close
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Content-Length: 79082
+Content-Type: application/javascript; charset=utf-8
+Last-Modified: Mon, 20 Mar 2017 19:01:15 GMT
+Server: nginx
+ETag: W/"58d026fb-41707"
+Cache-Control: max-age=315360000
+Cache-Control: public
+Access-Control-Allow-Origin: *
+Vary: Accept-Encoding
+X-HW: 1552777711.dop009.sk1.t,1552777712.cds053.sk1.shn,1552777712.cds053.sk1.c
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/social-links.png HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Content-Type: image/png
+Content-Length: 887
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-377"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/logo.svg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Content-Type: image/svg+xml
+Content-Length: 1348
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-544"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/style.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Content-Type: text/css
+Content-Length: 27551
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-6b9f"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/bootstrap-iso.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Content-Type: text/css
+Content-Length: 202858
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-3186a"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  use.fontawesome.com:443
+GET /releases/v5.6.3/css/all.css HTTP/1.1
+Host: use.fontawesome.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Content-Type: text/css
+Transfer-Encoding: chunked
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET
+Access-Control-Max-Age: 3000
+Last-Modified: Thu, 20 Dec 2018 17:45:13 GMT
+ETag: W/"dc93d584e41f8417f6b7163320d34329"
+Cache-Control: max-age=31556926
+Server: NetDNA-cache/2.2
+Vary: Origin, Access-Control-Request-Headers, Access-Control-Request-Method, Accept-Encoding
+X-Cache: HIT
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  fonts.googleapis.com:443
+GET /css?family=Montserrat:100,300,400,500,700 HTTP/1.1
+Host: fonts.googleapis.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Content-Type: text/css; charset=utf-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Expires: Sat, 16 Mar 2019 23:08:32 GMT
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Cache-Control: private, max-age=86400
+Server: ESF
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
+Accept-Ranges: none
+Vary: Accept-Encoding
+Connection: close
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /admin/users/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 302 Found
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+Connection: close
+Location: /auth/login/?next=/admin/users/
+X-Frame-Options: SAMEORIGIN
+Vary: Cookie
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /auth/login/?next=/admin/users/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+Expires: Sat, 16 Mar 2019 23:08:32 GMT
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Vary: Cookie
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: csrftoken=tbCHeOhjpH57z0vSp6oZgna8xz5tFQk0wUjYtY7xM1ao4jHVHAzgk9aqOHKaUT0b; expires=Sat, 14 Mar 2020 23:08:32 GMT; Max-Age=31449600; Path=/; SameSite=Lax
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to code.jquery.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     code.jquery.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  code.jquery.com:443
+GET /jquery-3.2.1.js HTTP/1.1
+Host: code.jquery.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Connection: close
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Content-Length: 79082
+Content-Type: application/javascript; charset=utf-8
+Last-Modified: Mon, 20 Mar 2017 19:01:15 GMT
+Server: nginx
+ETag: W/"58d026fb-41707"
+Cache-Control: max-age=315360000
+Cache-Control: public
+Access-Control-Allow-Origin: *
+Vary: Accept-Encoding
+X-HW: 1552777712.dop009.sk1.t,1552777712.cds047.sk1.shn,1552777712.dop009.sk1.t,1552777712.cds028.sk1.c
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/social-links.png HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Content-Type: image/png
+Content-Length: 887
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-377"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/logo.svg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Content-Type: image/svg+xml
+Content-Length: 1348
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-544"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/style.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Content-Type: text/css
+Content-Length: 27551
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-6b9f"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/bootstrap-iso.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Content-Type: text/css
+Content-Length: 202858
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-3186a"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  use.fontawesome.com:443
+GET /releases/v5.6.3/css/all.css HTTP/1.1
+Host: use.fontawesome.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Content-Type: text/css
+Transfer-Encoding: chunked
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET
+Access-Control-Max-Age: 3000
+Last-Modified: Thu, 20 Dec 2018 17:45:13 GMT
+ETag: W/"dc93d584e41f8417f6b7163320d34329"
+Cache-Control: max-age=31556926
+Server: NetDNA-cache/2.2
+Vary: Origin, Access-Control-Request-Headers, Access-Control-Request-Method, Accept-Encoding
+X-Cache: HIT
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  fonts.googleapis.com:443
+GET /css?family=Montserrat:100,300,400,500,700 HTTP/1.1
+Host: fonts.googleapis.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Content-Type: text/css; charset=utf-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Expires: Sat, 16 Mar 2019 23:08:32 GMT
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Cache-Control: private, max-age=86400
+Server: ESF
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
+Accept-Ranges: none
+Vary: Accept-Encoding
+Connection: close
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /admin/users/read/1/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 302 Found
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+Connection: close
+Location: /auth/login/?next=/admin/users/read/1/
+X-Frame-Options: SAMEORIGIN
+Vary: Cookie
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /auth/login/?next=/admin/users/read/1/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+Expires: Sat, 16 Mar 2019 23:08:32 GMT
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Vary: Cookie
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: csrftoken=dionSeni4jxeXV32joT4lSIBgHdQdFcTZLTQ4B6Vg8JXMCaUlhcF5TvKKnvj9vJG; expires=Sat, 14 Mar 2020 23:08:32 GMT; Max-Age=31449600; Path=/; SameSite=Lax
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to code.jquery.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     code.jquery.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  code.jquery.com:443
+GET /jquery-3.2.1.js HTTP/1.1
+Host: code.jquery.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Connection: close
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Content-Length: 79082
+Content-Type: application/javascript; charset=utf-8
+Last-Modified: Mon, 20 Mar 2017 19:01:15 GMT
+Server: nginx
+ETag: W/"58d026fb-41707"
+Cache-Control: max-age=315360000
+Cache-Control: public
+Access-Control-Allow-Origin: *
+Vary: Accept-Encoding
+X-HW: 1552777712.dop009.sk1.t,1552777712.cds033.sk1.shn,1552777712.dop009.sk1.t,1552777712.cds028.sk1.c
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/social-links.png HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Content-Type: image/png
+Content-Length: 887
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-377"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/logo.svg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Content-Type: image/svg+xml
+Content-Length: 1348
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-544"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/style.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Content-Type: text/css
+Content-Length: 27551
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-6b9f"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/bootstrap-iso.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:32 GMT
+Content-Type: text/css
+Content-Length: 202858
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-3186a"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  use.fontawesome.com:443
+GET /releases/v5.6.3/css/all.css HTTP/1.1
+Host: use.fontawesome.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:33 GMT
+Content-Type: text/css
+Transfer-Encoding: chunked
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET
+Access-Control-Max-Age: 3000
+Last-Modified: Thu, 20 Dec 2018 17:45:13 GMT
+ETag: W/"dc93d584e41f8417f6b7163320d34329"
+Cache-Control: max-age=31556926
+Server: NetDNA-cache/2.2
+Vary: Origin, Access-Control-Request-Headers, Access-Control-Request-Method, Accept-Encoding
+X-Cache: HIT
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  fonts.googleapis.com:443
+GET /css?family=Montserrat:100,300,400,500,700 HTTP/1.1
+Host: fonts.googleapis.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Content-Type: text/css; charset=utf-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Expires: Sat, 16 Mar 2019 23:08:33 GMT
+Date: Sat, 16 Mar 2019 23:08:33 GMT
+Cache-Control: private, max-age=86400
+Server: ESF
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
+Accept-Ranges: none
+Vary: Accept-Encoding
+Connection: close
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /cart/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 302 Found
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:34 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+Connection: close
+Location: /auth/login/?next=/cart/
+X-Frame-Options: SAMEORIGIN
+Vary: Cookie
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /auth/login/?next=/cart/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:34 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+Expires: Sat, 16 Mar 2019 23:08:34 GMT
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Vary: Cookie
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: csrftoken=rylKUF7J03niq3b8nZkwtp7vWJ2Q9vs14unUrVo3KrXiNPcCV65NjexB0cwLiUxm; expires=Sat, 14 Mar 2020 23:08:34 GMT; Max-Age=31449600; Path=/; SameSite=Lax
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to code.jquery.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     code.jquery.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  code.jquery.com:443
+GET /jquery-3.2.1.js HTTP/1.1
+Host: code.jquery.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:34 GMT
+Connection: close
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Content-Length: 79082
+Content-Type: application/javascript; charset=utf-8
+Last-Modified: Mon, 20 Mar 2017 19:01:15 GMT
+Server: nginx
+ETag: W/"58d026fb-41707"
+Cache-Control: max-age=315360000
+Cache-Control: public
+Access-Control-Allow-Origin: *
+Vary: Accept-Encoding
+X-HW: 1552777714.dop009.sk1.t,1552777714.cds028.sk1.shn,1552777714.cds028.sk1.c
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/social-links.png HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:34 GMT
+Content-Type: image/png
+Content-Length: 887
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-377"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/logo.svg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:34 GMT
+Content-Type: image/svg+xml
+Content-Length: 1348
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-544"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/style.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:34 GMT
+Content-Type: text/css
+Content-Length: 27551
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-6b9f"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/bootstrap-iso.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:34 GMT
+Content-Type: text/css
+Content-Length: 202858
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-3186a"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  use.fontawesome.com:443
+GET /releases/v5.6.3/css/all.css HTTP/1.1
+Host: use.fontawesome.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:34 GMT
+Content-Type: text/css
+Transfer-Encoding: chunked
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET
+Access-Control-Max-Age: 3000
+Last-Modified: Thu, 20 Dec 2018 17:45:13 GMT
+ETag: W/"dc93d584e41f8417f6b7163320d34329"
+Cache-Control: max-age=31556926
+Server: NetDNA-cache/2.2
+Vary: Origin, Access-Control-Request-Headers, Access-Control-Request-Method, Accept-Encoding
+X-Cache: HIT
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  fonts.googleapis.com:443
+GET /css?family=Montserrat:100,300,400,500,700 HTTP/1.1
+Host: fonts.googleapis.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Content-Type: text/css; charset=utf-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Expires: Sat, 16 Mar 2019 23:08:34 GMT
+Date: Sat, 16 Mar 2019 23:08:34 GMT
+Cache-Control: private, max-age=86400
+Server: ESF
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
+Accept-Ranges: none
+Vary: Accept-Encoding
+Connection: close
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /contact/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:34 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+X-Frame-Options: SAMEORIGIN
+Vary: Cookie
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to code.jquery.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     code.jquery.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  code.jquery.com:443
+GET /jquery-3.2.1.js HTTP/1.1
+Host: code.jquery.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:34 GMT
+Connection: close
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Content-Length: 79082
+Content-Type: application/javascript; charset=utf-8
+Last-Modified: Mon, 20 Mar 2017 19:01:15 GMT
+Server: nginx
+ETag: W/"58d026fb-41707"
+Cache-Control: max-age=315360000
+Cache-Control: public
+Access-Control-Allow-Origin: *
+Vary: Accept-Encoding
+X-HW: 1552777714.dop009.sk1.t,1552777714.cds054.sk1.shn,1552777714.cds054.sk1.c
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/social-links.png HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:34 GMT
+Content-Type: image/png
+Content-Length: 887
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-377"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/logo.svg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:34 GMT
+Content-Type: image/svg+xml
+Content-Length: 1348
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-544"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/style.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:34 GMT
+Content-Type: text/css
+Content-Length: 27551
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-6b9f"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/bootstrap-iso.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:34 GMT
+Content-Type: text/css
+Content-Length: 202858
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-3186a"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  use.fontawesome.com:443
+GET /releases/v5.6.3/css/all.css HTTP/1.1
+Host: use.fontawesome.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:34 GMT
+Content-Type: text/css
+Transfer-Encoding: chunked
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET
+Access-Control-Max-Age: 3000
+Last-Modified: Thu, 20 Dec 2018 17:45:13 GMT
+ETag: W/"dc93d584e41f8417f6b7163320d34329"
+Cache-Control: max-age=31556926
+Server: NetDNA-cache/2.2
+Vary: Origin, Access-Control-Request-Headers, Access-Control-Request-Method, Accept-Encoding
+X-Cache: HIT
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  fonts.googleapis.com:443
+GET /css?family=Montserrat:100,300,400,500,700 HTTP/1.1
+Host: fonts.googleapis.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Content-Type: text/css; charset=utf-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Expires: Sat, 16 Mar 2019 23:08:34 GMT
+Date: Sat, 16 Mar 2019 23:08:34 GMT
+Cache-Control: private, max-age=86400
+Server: ESF
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
+Accept-Ranges: none
+Vary: Accept-Encoding
+Connection: close
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /order/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:35 GMT
+Content-Type: text/html
+Content-Length: 27
+Connection: close
+X-Frame-Options: SAMEORIGIN
+Vary: Cookie
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /order/read/1/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:35 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+X-Frame-Options: SAMEORIGIN
+Vary: Cookie
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to code.jquery.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     code.jquery.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  code.jquery.com:443
+GET /jquery-3.2.1.js HTTP/1.1
+Host: code.jquery.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:36 GMT
+Connection: close
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Content-Length: 79082
+Content-Type: application/javascript; charset=utf-8
+Last-Modified: Mon, 20 Mar 2017 19:01:15 GMT
+Server: nginx
+ETag: W/"58d026fb-41707"
+Cache-Control: max-age=315360000
+Cache-Control: public
+Access-Control-Allow-Origin: *
+Vary: Accept-Encoding
+X-HW: 1552777716.dop015.sk1.t,1552777716.cds064.sk1.shn,1552777716.dop015.sk1.t,1552777716.cds028.sk1.c
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/social-links.png HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:36 GMT
+Content-Type: image/png
+Content-Length: 887
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-377"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /media/products_images/product-2.jpg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:36 GMT
+Content-Type: image/jpeg
+Content-Length: 34621
+Last-Modified: Mon, 11 Mar 2019 21:02:15 GMT
+Connection: close
+ETag: "5c86ccd7-873d"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/logo.svg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:36 GMT
+Content-Type: image/svg+xml
+Content-Length: 1348
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-544"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/style.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:36 GMT
+Content-Type: text/css
+Content-Length: 27551
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-6b9f"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/bootstrap-iso.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:36 GMT
+Content-Type: text/css
+Content-Length: 202858
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-3186a"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  use.fontawesome.com:443
+GET /releases/v5.6.3/css/all.css HTTP/1.1
+Host: use.fontawesome.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:36 GMT
+Content-Type: text/css
+Transfer-Encoding: chunked
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET
+Access-Control-Max-Age: 3000
+Last-Modified: Thu, 20 Dec 2018 17:45:13 GMT
+ETag: W/"dc93d584e41f8417f6b7163320d34329"
+Cache-Control: max-age=31556926
+Server: NetDNA-cache/2.2
+Vary: Origin, Access-Control-Request-Headers, Access-Control-Request-Method, Accept-Encoding
+X-Cache: HIT
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  fonts.googleapis.com:443
+GET /css?family=Montserrat:100,300,400,500,700 HTTP/1.1
+Host: fonts.googleapis.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Content-Type: text/css; charset=utf-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Expires: Sat, 16 Mar 2019 23:08:36 GMT
+Date: Sat, 16 Mar 2019 23:08:36 GMT
+Cache-Control: private, max-age=86400
+Server: ESF
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
+Accept-Ranges: none
+Vary: Accept-Encoding
+Connection: close
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /products/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:37 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+X-Frame-Options: SAMEORIGIN
+Vary: Cookie
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to code.jquery.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     code.jquery.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  code.jquery.com:443
+GET /jquery-3.2.1.js HTTP/1.1
+Host: code.jquery.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:37 GMT
+Connection: close
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Content-Length: 79082
+Content-Type: application/javascript; charset=utf-8
+Last-Modified: Mon, 20 Mar 2017 19:01:15 GMT
+Server: nginx
+ETag: W/"58d026fb-41707"
+Cache-Control: max-age=315360000
+Cache-Control: public
+Access-Control-Allow-Origin: *
+Vary: Accept-Encoding
+X-HW: 1552777717.dop002.sk1.t,1552777717.cds004.sk1.shn,1552777717.dop002.sk1.t,1552777717.cds028.sk1.c
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/social-links.png HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:37 GMT
+Content-Type: image/png
+Content-Length: 887
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-377"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/arrow.svg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:37 GMT
+Content-Type: image/svg+xml
+Content-Length: 355
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-163"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/logo.svg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:37 GMT
+Content-Type: image/svg+xml
+Content-Length: 1348
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-544"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/style.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:37 GMT
+Content-Type: text/css
+Content-Length: 27551
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-6b9f"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/bootstrap-iso.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:37 GMT
+Content-Type: text/css
+Content-Length: 202858
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-3186a"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  use.fontawesome.com:443
+GET /releases/v5.6.3/css/all.css HTTP/1.1
+Host: use.fontawesome.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:37 GMT
+Content-Type: text/css
+Transfer-Encoding: chunked
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET
+Access-Control-Max-Age: 3000
+Last-Modified: Thu, 20 Dec 2018 17:45:13 GMT
+ETag: W/"dc93d584e41f8417f6b7163320d34329"
+Cache-Control: max-age=31556926
+Server: NetDNA-cache/2.2
+Vary: Origin, Access-Control-Request-Headers, Access-Control-Request-Method, Accept-Encoding
+X-Cache: HIT
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  fonts.googleapis.com:443
+GET /css?family=Montserrat:100,300,400,500,700 HTTP/1.1
+Host: fonts.googleapis.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Content-Type: text/css; charset=utf-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Expires: Sat, 16 Mar 2019 23:08:37 GMT
+Date: Sat, 16 Mar 2019 23:08:37 GMT
+Cache-Control: private, max-age=86400
+Server: ESF
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
+Accept-Ranges: none
+Vary: Accept-Encoding
+Connection: close
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /products/1/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:37 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+X-Frame-Options: SAMEORIGIN
+Vary: Cookie
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to code.jquery.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     code.jquery.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  code.jquery.com:443
+GET /jquery-3.2.1.js HTTP/1.1
+Host: code.jquery.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:37 GMT
+Connection: close
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Content-Length: 79082
+Content-Type: application/javascript; charset=utf-8
+Last-Modified: Mon, 20 Mar 2017 19:01:15 GMT
+Server: nginx
+ETag: W/"58d026fb-41707"
+Cache-Control: max-age=315360000
+Cache-Control: public
+Access-Control-Allow-Origin: *
+Vary: Accept-Encoding
+X-HW: 1552777717.dop009.sk1.t,1552777717.cds057.sk1.shn,1552777717.dop009.sk1.t,1552777717.cds028.sk1.c
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/social-links.png HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:37 GMT
+Content-Type: image/png
+Content-Length: 887
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-377"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/arrow.svg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:37 GMT
+Content-Type: image/svg+xml
+Content-Length: 355
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-163"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /media/products_images/product-1.jpg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:37 GMT
+Content-Type: image/jpeg
+Content-Length: 62082
+Last-Modified: Mon, 11 Mar 2019 21:02:15 GMT
+Connection: close
+ETag: "5c86ccd7-f282"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/logo.svg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:37 GMT
+Content-Type: image/svg+xml
+Content-Length: 1348
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-544"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/style.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:37 GMT
+Content-Type: text/css
+Content-Length: 27551
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-6b9f"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/bootstrap-iso.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:37 GMT
+Content-Type: text/css
+Content-Length: 202858
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-3186a"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  use.fontawesome.com:443
+GET /releases/v5.6.3/css/all.css HTTP/1.1
+Host: use.fontawesome.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:38 GMT
+Content-Type: text/css
+Transfer-Encoding: chunked
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET
+Access-Control-Max-Age: 3000
+Last-Modified: Thu, 20 Dec 2018 17:45:13 GMT
+ETag: W/"dc93d584e41f8417f6b7163320d34329"
+Cache-Control: max-age=31556926
+Server: NetDNA-cache/2.2
+Vary: Origin, Access-Control-Request-Headers, Access-Control-Request-Method, Accept-Encoding
+X-Cache: HIT
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  fonts.googleapis.com:443
+GET /css?family=Montserrat:100,300,400,500,700 HTTP/1.1
+Host: fonts.googleapis.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Content-Type: text/css; charset=utf-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Expires: Sat, 16 Mar 2019 23:08:38 GMT
+Date: Sat, 16 Mar 2019 23:08:38 GMT
+Cache-Control: private, max-age=86400
+Server: ESF
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
+Accept-Ranges: none
+Vary: Accept-Encoding
+Connection: close
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /products/home/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:38 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+X-Frame-Options: SAMEORIGIN
+Vary: Cookie
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to code.jquery.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     code.jquery.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  code.jquery.com:443
+GET /jquery-3.2.1.js HTTP/1.1
+Host: code.jquery.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:38 GMT
+Connection: close
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Content-Length: 79082
+Content-Type: application/javascript; charset=utf-8
+Last-Modified: Mon, 20 Mar 2017 19:01:15 GMT
+Server: nginx
+ETag: W/"58d026fb-41707"
+Cache-Control: max-age=315360000
+Cache-Control: public
+Access-Control-Allow-Origin: *
+Vary: Accept-Encoding
+X-HW: 1552777718.dop002.sk1.t,1552777718.cds029.sk1.shn,1552777718.dop002.sk1.t,1552777718.cds028.sk1.c
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/social-links.png HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:38 GMT
+Content-Type: image/png
+Content-Length: 887
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-377"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/arrow.svg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:38 GMT
+Content-Type: image/svg+xml
+Content-Length: 355
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-163"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/img/logo.svg HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:38 GMT
+Content-Type: image/svg+xml
+Content-Length: 1348
+Last-Modified: Fri, 15 Mar 2019 17:28:27 GMT
+Connection: close
+ETag: "5c8be0bb-544"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/style.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:38 GMT
+Content-Type: text/css
+Content-Length: 27551
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-6b9f"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /static/css/bootstrap-iso.css HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:38 GMT
+Content-Type: text/css
+Content-Length: 202858
+Last-Modified: Fri, 15 Mar 2019 17:28:26 GMT
+Connection: close
+ETag: "5c8be0ba-3186a"
+Accept-Ranges: bytes
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     use.fontawesome.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  use.fontawesome.com:443
+GET /releases/v5.6.3/css/all.css HTTP/1.1
+Host: use.fontawesome.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Date: Sat, 16 Mar 2019 23:08:38 GMT
+Content-Type: text/css
+Transfer-Encoding: chunked
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET
+Access-Control-Max-Age: 3000
+Last-Modified: Thu, 20 Dec 2018 17:45:13 GMT
+ETag: W/"dc93d584e41f8417f6b7163320d34329"
+Cache-Control: max-age=31556926
+Server: NetDNA-cache/2.2
+Vary: Origin, Access-Control-Request-Headers, Access-Control-Request-Method, Accept-Encoding
+X-Cache: HIT
+Content-Encoding: gzip
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:885 creating new socket:     fonts.googleapis.com:443
+[[1;34mdebug[0m] browser.c:905 good socket connection:  fonts.googleapis.com:443
+GET /css?family=Montserrat:100,300,400,500,700 HTTP/1.1
+Host: fonts.googleapis.com
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+HTTP/1.1 200 OK
+Content-Type: text/css; charset=utf-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Expires: Sat, 16 Mar 2019 23:08:38 GMT
+Date: Sat, 16 Mar 2019 23:08:38 GMT
+Cache-Control: private, max-age=86400
+Server: ESF
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: quic=":443"; ma=2592000; v="46,44,43,39"
+Accept-Ranges: none
+Vary: Accept-Encoding
+Connection: close
+
+
+[[1;34mdebug[0m] browser.c:870 attempting connection to geekshop:80
+[[1;34mdebug[0m] browser.c:885 creating new socket:     geekshop:80
+[[1;34mdebug[0m] browser.c:905 good socket connection:  geekshop:80
+GET /products/price/1/json/ HTTP/1.1
+Host: geekshop
+Cookie: SameSite=Lax
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (pc-x86_64-linux-gnu) Siege/4.0.4
+Connection: close
+
+
+
+Transactions:		         138 hits
+Availability:		       99.28 %
+Elapsed time:		       13.68 secs
+Data transferred:	        4.80 MB
+Response time:		        0.05 secs
+Transaction rate:	       10.09 trans/sec
+Throughput:		        0.35 MB/sec
+Concurrency:		        0.49
+Successful transactions:         138
+HTTP OK received:	         129
+Failed transactions:	           1
+Longest transaction:	        0.62
+Shortest transaction:	        0.00
+ 
+HTTP/1.1 200 OK
+Server: nginx/1.15.5 (Ubuntu)
+Date: Sat, 16 Mar 2019 23:08:39 GMT
+Content-Type: application/json
+Content-Length: 19
+Connection: close
+X-Frame-Options: SAMEORIGIN
+
+
