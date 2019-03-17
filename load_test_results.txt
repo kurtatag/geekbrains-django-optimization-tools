@@ -1,0 +1,63 @@
+bob@geekshop:~$ siege -f urls.txt -d0 -r25 -c100
+** SIEGE 4.0.4
+** Preparing 100 concurrent users for battle.
+The server is now under siege...
+Transactions:                  20800 hits
+Availability:                 100.00 %
+Elapsed time:                 103.13 secs
+Data transferred:             710.85 MB
+Response time:                  0.46 secs
+Transaction rate:             201.69 trans/sec
+Throughput:                     6.89 MB/sec
+Concurrency:                   92.37
+Successful transactions:       20800
+Failed transactions:               0
+Longest transaction:           10.09
+Shortest transaction:           0.00
+
+
+
+bob@geekshop:~$ siege -f urls.txt -d0 -r15 -c150 -i
+** SIEGE 4.0.4
+** Preparing 150 concurrent users for battle.
+The server is now under siege...
+Transactions:                  16652 hits
+Availability:                 100.00 %
+Elapsed time:                  81.71 secs
+Data transferred:             572.22 MB
+Response time:                  0.64 secs
+Transaction rate:             203.79 trans/sec
+Throughput:                     7.00 MB/sec
+Concurrency:                  130.64
+Successful transactions:       16652
+Failed transactions:               0
+Longest transaction:           19.18
+Shortest transaction:           0.00
+
+
+
+bob@geekshop:~$ siege -f urls.txt -d0 -r15 -c300 -i
+
+================================================================
+WARNING: The number of users is capped at 255.  To increase this
+         limit, search your .siegerc file for 'limit' and change
+         its value. Make sure you read the instructions there...
+================================================================
+** SIEGE 4.0.4
+** Preparing 255 concurrent users for battle.
+The server is now under siege...[error] Failed to make an SSL connection: 5
+[error] SSL_write() failed (syscall): Broken pipe
+[error] SSL_write() failed (syscall)
+
+Transactions:                  28145 hits
+Availability:                  99.99 %
+Elapsed time:                 141.87 secs
+Data transferred:             967.69 MB
+Response time:                  1.10 secs
+Transaction rate:             198.39 trans/sec
+Throughput:                     6.82 MB/sec
+Concurrency:                  217.51
+Successful transactions:       28145
+Failed transactions:               3
+Longest transaction:           21.32
+Shortest transaction:           0.00
