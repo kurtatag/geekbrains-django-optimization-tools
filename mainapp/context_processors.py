@@ -18,8 +18,9 @@ def cart(request):
     }
 
     if request.user.is_authenticated:
-        cart_info['items_total'] = Cart.cart_items_total(user=request.user)
-        cart_info['price_total'] = Cart.cart_price_total(user=request.user)
+        cart = Cart.objects.get(user=request.user)
+        cart_info['items_total'] = cart.get_total_quantity()
+        cart_info['price_total'] = cart.get_total_cost()
 
     return {
         'cart_info': cart_info,

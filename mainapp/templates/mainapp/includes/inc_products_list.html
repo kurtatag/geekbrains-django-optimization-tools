@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<div class="product-section padding-site">
+    <ul class="tab-controll">
+        {% for category in product_category_list %}
+            <li class="tab-list">
+                <a href="{% url 'products:category' current_product_category=category %}#categories"
+                   class="{% if current_product_category == category %}
+                            products-tab-link-active
+                          {% else %}
+                            products-tab-link
+                          {% endif %}">
+                    {{ category }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <div class="trending-product-box">
+        {% for product in product_list %}
+            <div class="trending-product" style="background-image: url({{ product.image.url }});">
+                <div class="trending-product-hover">
+                    <a href="{% url 'products:product_details' product_id=product.id %}">
+                        <div class="trending-product-link"><img src="{% static 'img/arrow.svg' %}" alt="arrow"></div>
+                    </a>
+                    <h4 class="trending-product-h4">{{ product.name }}</h4>
+                    <p class="trending-product-p">{{ product.short_description }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% include 'mainapp/includes/inc_pagination.html' %}
